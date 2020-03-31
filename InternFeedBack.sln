@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternFeedBack", "InternFeedBack\InternFeedBack.csproj", "{4AEF07E5-E956-49D5-B4D5-D418D98DFA60}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client-Koteswara", "Client-Koteswara", "{90B664B0-F228-41B1-8941-8570D3A7D244}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client - Harshini", "Client - Harshini", "{F1F5C574-6F6A-4324-BE6B-8A8C6FBD7DD8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend- Priyanka", "Backend- Priyanka", "{C9F6D421-8F86-400E-832D-94DEE3FDC514}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
