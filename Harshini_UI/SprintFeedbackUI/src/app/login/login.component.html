@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" class="login-title">
+            
+        </div>
+        <div class="col-md-4">
+            <div class="login">
+                <div class="login-screen">
+                    <div class="app-title">                        
+                        <h1>Login</h1>
+                    </div>        
+                    <div class="login-form"> 
+                        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">         
+                              <input type="text" class="login-field"  placeholder="Username" id="login-name" formControlName="userName" required>
+                              <div *ngIf="userName.invalid && (userName.dirty || userName.touched)" class="alert alert-danger">
+                                <div *ngIf="userName.errors.required">
+                                    Username is required.
+                                </div>
+                                <div *ngIf="userName.errors.minlength">
+                                    Username must be at least 4 characters long.
+                                </div>
+                              </div>
+                              <input type="password" class="login-field"  placeholder="Password" id="login-pass" formControlName="passWord" required>
+                              <div *ngIf="passWord.invalid && (passWord.dirty || passWord.touched)" class="alert alert-danger">
+                                <div *ngIf="passWord.errors.required">
+                                    Password is required.
+                                </div>
+                                <div *ngIf="passWord.errors.minlength">
+                                    Password must be at least 8 characters long.
+                                </div>
+                                <!-- <div *ngIf="passWord.errors.pattern">
+                                    Password should contain atleast one special character,one numerical value,one caps and small letter.
+                                </div> -->
+                              </div>
+                              <button type="submit"  class="btn btn-primary btn-large btn-block" [disabled]="!profileForm.valid">Submit</button>
+                        </form>    
+                    </div>
+                </div>
+            </div>       
+        </div>
+    </div>
+</div>
+	
