@@ -1,0 +1,64 @@
+
+<mat-toolbar color="primary">
+    <span class="fill-remaining-space">Add New Project</span>
+</mat-toolbar>
+<div class="container"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="10px"
+     fxLayoutGap.xs="0">
+     <div fxFlex="20"></div>
+     <div fxFlex="50">
+        <form [formGroup]="addNewProject" (ngSubmit)="onSubmit()" class="form">
+
+            <mat-form-field class="form-element">
+              <input matInput placeholder="Project Name" formControlName="projectName">
+              <mat-error *ngIf="!projectName.valid && projectName.touched">
+                {{ titleAlert }}
+              </mat-error>
+            </mat-form-field>
+        
+            <mat-form-field class="form-element">
+                <input matInput  placeholder="Chief Mentor" formControlName="chiefMentor">
+                <mat-error *ngIf="!chiefMentor.valid && chiefMentor.touched">
+                  {{ titleAlert }}
+                </mat-error>
+              </mat-form-field>
+        
+              <mat-form-field class="form-element">
+                <input matInput placeholder="Mentor 1" formControlName="firstMentor">
+                <mat-error *ngIf="!firstMentor.valid && firstMentor.touched">
+                  {{ titleAlert }}
+                </mat-error>
+              </mat-form-field>
+        
+              <mat-form-field class="form-element">
+                <input matInput placeholder="Mentor 2" formControlName="secondMentor">
+                <mat-error *ngIf="!secondMentor.valid && secondMentor.touched">
+                  {{ titleAlert }}
+                </mat-error>
+              </mat-form-field>
+        
+              <mat-form-field class="form-element">
+                <input matInput placeholder="Mentor 3" formControlName="thirdMentor">
+                <mat-error *ngIf="!thirdMentor.valid && thirdMentor.touched">
+                  {{ titleAlert }}
+                </mat-error>
+              </mat-form-field>
+                 
+              <mat-form-field class="form-element">
+                <input matInput placeholder="Buddy" formControlName="buddyMember">
+                <mat-error *ngIf="!buddyMember.valid && buddyMember.touched">
+                  {{ titleAlert }}
+                </mat-error>
+              </mat-form-field>
+        
+            <div class="form-element">
+              <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!addNewProject.valid">Submit Form</button>
+            </div>
+        </form>
+        
+     </div>
+</div>
+

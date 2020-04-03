@@ -1,0 +1,45 @@
+<mat-toolbar color="primary">
+    <span class="fill-remaining-space">Add New Intern</span>
+</mat-toolbar>
+<div class="container"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="10px"
+     fxLayoutGap.xs="0">
+     <div fxFlex="20"></div>
+     <div fxFlex="50">
+        <form [formGroup]="addNewIntern" (ngSubmit)="onSubmit()" class="form">
+
+            <mat-form-field class="form-element">
+              <input matInput placeholder="Intern Name" formControlName="internName">
+              <mat-error *ngIf="!internName.valid && internName.touched">
+                {{ titleAlert }}
+              </mat-error>
+            </mat-form-field>
+        
+            <mat-form-field class="form-element">
+                <input matInput  placeholder="College" formControlName="collegeName">
+                <mat-error *ngIf="!collegeName.valid && collegeName.touched">
+                  {{ titleAlert }}
+                </mat-error>
+              </mat-form-field>
+        
+              <mat-form-field >
+                <mat-label>Project Name</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let project of projectName" [value]="project.value">
+                    {{project.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        
+            <div class="form-element">
+              <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!addNewIntern.valid">Submit Form</button>
+            </div>
+        </form>
+     </div>
+     
+</div>
+
+
