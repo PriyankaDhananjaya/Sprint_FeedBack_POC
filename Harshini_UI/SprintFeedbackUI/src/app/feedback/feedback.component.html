@@ -1,1 +1,8 @@
-<p>feedback works!</p>
+<mat-form-field>
+    <mat-label>Please select the intern </mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="intern" >
+      <mat-option *ngFor="let intern of internList"    [value]="intern.internName">
+        {{intern.internName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>

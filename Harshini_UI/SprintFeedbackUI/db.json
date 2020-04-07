@@ -1,0 +1,112 @@
+{
+  "login": [
+    {
+      "id": 1,
+      "userName": "Harshini",
+      "passWord": "Random@123"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "projectName": "Project 1",
+      "projectDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit commodo nibh facilisis fermentum. ",
+      "chiefMentor": "Richard",
+      "firstMentor": "Sam",
+      "secondMentor": "Nick"
+    },
+    {
+      "id": 2,
+      "projectName": "Project 2",
+      "projectDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit commodo nibh facilisis fermentum. ",
+      "chiefMentor": "Dick",
+      "firstMentor": "Jones",
+      "secondMentor": "Max"
+    },
+    {
+      "id": 3,
+      "projectName": "Project 3",
+      "projectDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit commodo nibh facilisis fermentum. ",
+      "chiefMentor": "Nison",
+      "firstMentor": "Philip",
+      "secondMentor": "Mark"
+    },
+    {
+      "projectName": "cdcdcs",
+      "projectDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit commodo nibh facilisis fermentum. ",
+      "chiefMentor": "dcsdcsdc",
+      "firstMentor": "cdcdscsdc",
+      "secondMentor": "cddcdscsdc",
+      "id": 4
+    }
+  ],
+  "interns": [
+    {
+      "id": 1,
+      "internName": "Nick",
+      "project": "Project 1"
+    },
+    {
+      "id": 3,
+      "internName": "Rick",
+      "project": "Project 2"
+    },
+    {
+      "id": 4,
+      "internName": "Jack",
+      "project": "Project 2"
+    },
+    {
+      "id": 5,
+      "internName": "Rio",
+      "project": "Project 3"
+    },
+    {
+      "id": 6,
+      "internName": "James",
+      "project": "Project 3"
+    },
+    {
+      "id": 7,
+      "internName": "Sax",
+      "project": "Project 2"
+    },
+    {
+      "id": 8,
+      "internName": "Fabby",
+      "project": "Project 1"
+    },
+    {
+      "internName": "efewfef",
+      "projectName": "Project 2",
+      "id": 9
+    },
+    {
+      "internName": "sdcdsc",
+      "projectName": "Project 1",
+      "id": 10
+    }
+  ],
+  "feedback": [
+    {
+      "project1": {
+        "sprint1": 4,
+        "sprint2": 3,
+        "sprint3": 5,
+        "sprint4": 1
+      },
+      "project2": {
+        "sprint1": 3,
+        "sprint2": 2,
+        "sprint3": 4,
+        "sprint4": 3
+      },
+      "project3": {
+        "sprint1": 4,
+        "sprint2": 2,
+        "sprint3": 4,
+        "sprint4": 2
+      }
+    }
+  ]
+}

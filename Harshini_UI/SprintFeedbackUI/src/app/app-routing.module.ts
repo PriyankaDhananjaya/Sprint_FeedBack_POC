@@ -8,6 +8,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { HomeComponent } from './home/home.component';
 
 
+
 const routes: Routes = [
   {
     path:'',component: LoginComponent

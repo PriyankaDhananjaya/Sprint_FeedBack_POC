@@ -32,7 +32,11 @@
                                     Password should contain atleast one special character,one numerical value,one caps and small letter.
                                 </div> -->
                               </div>
-                              <button type="submit"  class="btn btn-primary btn-large btn-block" [disabled]="!profileForm.valid">Submit</button>
+                              <div>
+                                <button type="submit"  class="btn btn-primary btn-block" [disabled]="!profileForm.valid">Submit</button>
+                                <!-- <button type="submit"  class="btn btn-primary btn-block" routerLink="/register">Register</button> -->
+                              </div>
+                              
                         </form>    
                     </div>
                 </div>
