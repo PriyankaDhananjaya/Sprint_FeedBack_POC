@@ -1,5 +1,5 @@
 {
-  "login": [
+  "user": [
     {
       "id": 1,
       "userName": "Harshini",
@@ -85,28 +85,39 @@
       "internName": "sdcdsc",
       "projectName": "Project 1",
       "id": 10
+    },
+    {
+      "internName": "aded",
+      "projectName": "Project 2",
+      "id": 11
     }
   ],
   "feedback": [
     {
-      "project1": {
-        "sprint1": 4,
-        "sprint2": 3,
-        "sprint3": 5,
-        "sprint4": 1
-      },
-      "project2": {
-        "sprint1": 3,
-        "sprint2": 2,
-        "sprint3": 4,
-        "sprint4": 3
-      },
-      "project3": {
-        "sprint1": 4,
-        "sprint2": 2,
-        "sprint3": 4,
-        "sprint4": 2
-      }
+      "userName": "Harshini",
+      "internName": "Rick",
+      "problemSolving": 3,
+      "technicalExcellence": 3,
+      "projectDelivery": 3,
+      "projectProcessCompilance": 3,
+      "teaming": 3,
+      "discipline": 3,
+      "communication": 3,
+      "overallTechnicalCompitency": 3,
+      "id": 1
+    },
+    {
+      "userName": "Harshini",
+      "internName": "Rick",
+      "problemSolving": 3,
+      "technicalExcellence": 3,
+      "projectDelivery": 3,
+      "projectProcessCompilance": 3,
+      "teaming": 3,
+      "discipline": 3,
+      "communication": 3,
+      "overallTechnicalCompitency": 3,
+      "id": 2
     }
   ]
 }

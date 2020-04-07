@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Observable,throwError } from 'rxjs';
-import { project,intern } from '../Models/Data.model';
+import { project,intern,feedback,user } from '../Models/Data.model';
 import { catchError, filter } from 'rxjs/operators';
 
 
@@ -22,6 +22,10 @@ export class UserDataService {
       console.error('Server Side Error: ',errorResponse);
     }
     return throwError('There is a error with service');
+  }
+
+  getUser(): Observable<user>{
+    return this.http.get<user>(this._URL + '/user').pipe(catchError(this.handleError));
   }
 
   getProjects() : Observable<project>{
@@ -50,8 +54,14 @@ export class UserDataService {
     .pipe(catchError(this.handleError));
   }
 
-  getInternList(projectName:string) :Observable<intern>{
-    return this.http.get<intern>(this._URL + '/interns').pipe(
-      filter(intern => intern.project === projectName),catchError(this.handleError));
-  } 
+  
+
+  submitFeedback(newFeedback:feedback):Observable<feedback>{
+    return this.http.post<feedback>(this._URL + '/feedback',newFeedback,{
+      headers: new HttpHeaders({
+        'Content-Type' : 'application/json' 
+      })
+  })
+  .pipe(catchError(this.handleError))
+  }
 }

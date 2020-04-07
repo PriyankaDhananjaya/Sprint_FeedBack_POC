@@ -1,4 +1,12 @@
 
+export class user{
+  id: number;
+  userName: string;
+  password: string;
+  role: string;
+  contactNumber: number;
+}
+
 export class project {
     id: number;
     projectName: string;
@@ -14,5 +22,19 @@ export class project {
     collegeName: string;
     project: string;  
   }
+
+  export class feedback{
+    reviewerName: string;
+    internName: string;
+    problemSolving: number;
+    technicalExcellence: number; 
+    projectDelivery: number;
+    projectProcessCompilance: number;
+    teaming: number;
+    discipline: number;
+    communication: number;
+    overallTechnicalCompitency: number;
+  }
+
 
   

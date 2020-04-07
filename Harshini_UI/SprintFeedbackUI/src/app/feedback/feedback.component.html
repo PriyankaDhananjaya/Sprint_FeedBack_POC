@@ -1,8 +1,164 @@
-<mat-form-field>
-    <mat-label>Please select the intern </mat-label>
-    <mat-select [(ngModel)]="selectedValue" name="intern" >
-      <mat-option *ngFor="let intern of internList"    [value]="intern.internName">
-        {{intern.internName}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
+<mat-toolbar color="primary" >
+  <span class="fill-remaining-space form-style">Feedback Form</span>
+</mat-toolbar>
+<div class="container"
+fxLayout
+fxLayout.xs="column"
+fxLayoutAlign="center"
+fxLayoutGap="10px"
+fxLayoutGap.xs="0">
+  <div fxFlex="20"></div>
+   
+   <div fxFlex="50">
+      <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()" class="form">
+        <mat-grid-list cols="2" >
+          <mat-grid-tile >
+            <mat-form-field class="form-element"> 
+                <mat-label>Please select the name of intern </mat-label>
+                <mat-select  name="intern" formControlName="internName">
+                  <mat-option *ngFor="let intern of internList" [value]="intern.internName">
+                    {{intern.internName}}
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="!internName.valid && internName.touched">
+                  {{ titleAlert }}
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-element">
+              <mat-label>Please select the name of reviewer </mat-label>
+              <mat-select  name="userName" formControlName="userName">
+                <mat-option *ngFor="let user of userList" [value]="user.userName">
+                  {{user.userName}}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="!userName.valid && userName.touched">
+                {{ titleAlert }}
+              </mat-error>
+          </mat-form-field>
+  
+            <mat-form-field class="form-element">
+              <input type="number" matInput placeholder="Project solving analyzing skill" formControlName="problemSolving">
+              <mat-error *ngIf="problemSolving.valid && problemSolving.touched">
+                {{ titleAlert }}
+              </mat-error>
+              <mat-error *ngIf="problemSolving.errors?.min">
+                {{ minAlert }}
+              </mat-error>
+              <mat-error *ngIf="problemSolving.errors?.max">
+                {{ maxAlert }}
+              </mat-error>
+            </mat-form-field>
+        
+            <mat-form-field class="form-element">
+                <input type="number" matInput  placeholder="Technical Excellence" formControlName="technicalExcellence">
+                <mat-error *ngIf="technicalExcellence.valid && technicalExcellence.touched">
+                  {{ titleAlert }}
+                </mat-error>
+                <mat-error *ngIf="technicalExcellence.errors?.min">
+                  {{ minAlert }}
+                </mat-error>
+                <mat-error *ngIf="technicalExcellence.errors?.max">
+                  {{ maxAlert }}
+                </mat-error>
+            </mat-form-field>
+  
+            <mat-form-field class="form-element">
+              <input type="number" matInput placeholder="Project Delivery" formControlName="projectDelivery">
+              <mat-error *ngIf="projectDelivery.valid && projectDelivery.touched">
+                  {{ titleAlert }}
+              </mat-error>
+              <mat-error *ngIf="projectDelivery.errors?.min">
+                {{ minAlert }}
+              </mat-error>
+              <mat-error *ngIf="projectDelivery.errors?.max">
+                {{ maxAlert }}
+              </mat-error>
+            </mat-form-field>
+        
+            <mat-form-field class="form-element">
+              <input type="number" matInput placeholder="Project Process Compilance" formControlName="projectProcessCompilance">
+              <mat-error *ngIf="projectProcessCompilance.valid && projectProcessCompilance.touched">
+                  {{ titleAlert }}
+              </mat-error>
+              <mat-error *ngIf="projectProcessCompilance.errors?.min">
+                {{ minAlert }}
+              </mat-error>
+              <mat-error *ngIf="projectProcessCompilance.errors?.max">
+                {{ maxAlert }}
+              </mat-error>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+
+         
+
+            <mat-form-field class="form-element">
+              <input type="number" matInput placeholder="Teaming" formControlName="teaming">
+              <mat-error *ngIf="teaming.valid && teaming.touched">
+                {{ titleAlert }}
+              </mat-error>
+              <mat-error *ngIf="teaming.errors?.min">
+                {{ minAlert }}
+              </mat-error>
+              <mat-error *ngIf="teaming.errors?.max">
+                {{ maxAlert }}
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-element">
+              <input type="number" matInput placeholder="Discipline" formControlName="discipline">
+              <mat-error *ngIf="discipline.valid && discipline.touched">
+                {{ titleAlert }}
+              </mat-error>
+              <mat-error *ngIf="discipline.errors?.min">
+                {{ minAlert }}
+              </mat-error>
+              <mat-error *ngIf="discipline.errors?.max">
+                {{ maxAlert }}
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-element">
+              <input type="number" matInput placeholder="Communication" formControlName="communication">
+              <mat-error *ngIf="communication.valid && communication.touched">
+                {{ titleAlert }}
+              </mat-error>
+              <mat-error *ngIf="communication.errors?.min">
+                {{ minAlert }}
+              </mat-error>
+              <mat-error *ngIf="communication.errors?.max">
+                {{ maxAlert }}
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-element">
+              <input type="number" matInput placeholder="Overall Technical Compitency" formControlName="overallTechnicalCompitency">
+              <mat-error *ngIf="overallTechnicalCompitency.valid && overallTechnicalCompitency.touched">
+                {{ titleAlert }}
+              </mat-error>
+              <mat-error *ngIf="overallTechnicalCompitency.errors?.min">
+                {{ minAlert }}
+              </mat-error>
+              <mat-error *ngIf="overallTechnicalCompitency.errors?.max">
+                {{ maxAlert }}
+              </mat-error>
+            </mat-form-field>
+            <div class="form-element">
+              <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!feedbackForm.valid">Submit Form</button>
+            </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+            
+         
+      
+            
+      
+            
+      
+          
+      </form>
+      
+   </div>
+</div>
+
