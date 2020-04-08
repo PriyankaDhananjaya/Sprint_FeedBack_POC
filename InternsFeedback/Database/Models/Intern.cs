@@ -14,7 +14,6 @@ namespace InternsFeedback.Models
         public string InternName { get; set; }
         public int CreatedBy { get; set; }
         public int ProjectId { get; set; }
-
         public virtual User CreatedByNavigation { get; set; }
         public virtual Project Project { get; set; }
         public virtual ICollection<Feedback> Feedback { get; set; }
