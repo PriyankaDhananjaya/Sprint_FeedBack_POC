@@ -3,8 +3,9 @@ import * as Highcharts from 'highcharts';
 import HC_stock from 'highcharts/modules/stock';
 import {MatPaginator} from '@angular/material/paginator';
 import { UserDataService } from '../Service/user-data.service';
-import { intern } from '../Models/Data.model';
-
+import { feedback } from '../Models/Data.model';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatSort} from '@angular/material/sort';
 @Component({
   selector: 'app-home', 
   templateUrl: './home.component.html',
@@ -12,26 +13,25 @@ import { intern } from '../Models/Data.model';
 })
 
  
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit {  
 
-  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+  @ViewChild(MatPaginator,{static: true}) paginator: MatPaginator;
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
 
   chartOptions: {};
-
+  searchKey : string;
+  feedbackData : feedback[];
   Highcharts = Highcharts;
+  displayedColumns: string[] = ["userName","internName","problemSolving","technicalExcellence","projectDelivery",
+  "projectProcessCompilance","teaming","discipline","communication","overallTechnicalCompitency"];
 
-  displayedColumns: string[] = ['id', 'name', 'college', 'project'];
-  
-  dataSource = this._userDataService.getInterns().subscribe(interns => this.dataSource = interns);
-
- 
+  dataSource = new MatTableDataSource<feedback>();
 
   constructor(private _userDataService : UserDataService) { }
-
   ngOnInit() {
-
+    this._userDataService.getFeedback().subscribe(interns => {this.dataSource.data = interns});
     this.dataSource.paginator = this.paginator;
-
+    this.dataSource.sort = this.sort;
     this.chartOptions = {
       chart: {
         type: 'column'
@@ -94,11 +94,16 @@ export class HomeComponent implements OnInit {
       window.dispatchEvent(new Event('resize'));
     }, 300);
 
-   
+  
   }
 
-  
-
+  onSearchClear(){
+    this.searchKey = ""; 
+    this.applyFilter();
+     }
+  applyFilter(){
+    this.dataSource.filter = this.searchKey.toLowerCase().trim();
+     }
 }
 
 

@@ -1,3 +1,18 @@
 table {
     width: 100%;
   }
+
+  .mat-cell {
+    justify-content:center;
+    text-align: center;
+  }
+
+  .contentAlign{
+    text-align: center;
+    justify-content:center;
+  }
+
+  .searchBox{
+    width: 30%;
+    margin-left: 35%;
+  }

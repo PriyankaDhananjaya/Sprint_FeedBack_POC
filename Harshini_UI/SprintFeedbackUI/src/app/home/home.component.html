@@ -7,51 +7,74 @@
 <br>
 <mat-divider></mat-divider>
 <br>
-<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGaps="20px" >
-    <div fxFlex="49">
-        <div class="mat-elevation-z8">
-            <table mat-table [dataSource]="dataSource">
-          
-              <!-- Position Column -->
-              <ng-container matColumnDef="id">
-                <th mat-header-cell *matHeaderCellDef> ID </th>
-                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-              </ng-container>
-          
-              <!-- Name Column -->
-              <ng-container matColumnDef="name">
-                <th mat-header-cell *matHeaderCellDef> Intern Name </th>
-                <td mat-cell *matCellDef="let element"> {{element.internName}} </td>
-              </ng-container>
-          
-              <!-- Weight Column -->
-              <ng-container matColumnDef="college">
-                <th mat-header-cell *matHeaderCellDef> College </th>
-                <td mat-cell *matCellDef="let element"> {{element.collegeName}} </td>
-              </ng-container>
-          
-              <!-- Symbol Column -->
-              <ng-container matColumnDef="project">
-                <th mat-header-cell *matHeaderCellDef> Project </th>
-                <td mat-cell *matCellDef="let element"> {{element.project}} </td>
-              </ng-container>
-          
-              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-            </table>
-          
-            <!-- <mat-paginator [length]="100"
-            [pageSize]="10"
-            [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator> -->
-        </div>
-    </div>
-    <div fxFlex="49">
-       
-    </div>
+<mat-form-field appearance="outline" class="searchBox">
+  <mat-label>Search</mat-label>
+  <input matInput [(ngModel)]="searchKey" placeholder="Search" (keyup)="applyFilter()" >
+  <mat-icon matSuffix *ngIf="searchKey" (click)="onSearchClear()">clear</mat-icon>  
+</mat-form-field>
+<div class="mat-elevation-z8">
 
+  <table mat-table [dataSource]="dataSource" matSort>
+  
+    <ng-container matColumnDef="userName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Username </th>
+      <td mat-cell *matCellDef="let element"> {{element.userName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="internName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Intern Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.internName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="problemSolving">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Problem Solving </th>
+      <td mat-cell contentAlign *matCellDef="let element"> {{element.problemSolving}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="technicalExcellence">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Technical Excellence </th>
+      <td mat-cell contentAlign *matCellDef="let element"> {{element.technicalExcellence}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="projectDelivery">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Project Delivery</th>
+      <td mat-cell contentAlign *matCellDef="let element"> {{element.projectDelivery}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="projectProcessCompilance">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Project Process Compilance</th>
+      <td mat-cell contentAlign *matCellDef="let element"> {{element.projectProcessCompilance}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="teaming">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Teaming </th>
+      <td mat-cell contentAlign *matCellDef="let element"> {{element.teaming}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="discipline">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Discipline</th>
+      <td mat-cell contentAlign *matCellDef="let element"> {{element.discipline}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="communication">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Communication</th>
+      <td mat-cell contentAlign *matCellDef="let element"> {{element.communication}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="overallTechnicalCompitency">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Overall Technical Compitency</th>
+      <td mat-cell contentAlign *matCellDef="let element"> {{element.overallTechnicalCompitency}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row contentAlign *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 </div>
-
 <br>
 <mat-divider></mat-divider>
+<br>
+
         
   

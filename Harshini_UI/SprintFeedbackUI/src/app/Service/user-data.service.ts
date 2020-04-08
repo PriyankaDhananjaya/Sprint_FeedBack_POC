@@ -54,8 +54,6 @@ export class UserDataService {
     .pipe(catchError(this.handleError));
   }
 
-  
-
   submitFeedback(newFeedback:feedback):Observable<feedback>{
     return this.http.post<feedback>(this._URL + '/feedback',newFeedback,{
       headers: new HttpHeaders({
@@ -63,5 +61,9 @@ export class UserDataService {
       })
   })
   .pipe(catchError(this.handleError))
+  }
+
+  getFeedback():Observable<feedback[]>{
+    return this.http.get<feedback[]>(this._URL + '/feedback').pipe(catchError(this.handleError));
   }
 }

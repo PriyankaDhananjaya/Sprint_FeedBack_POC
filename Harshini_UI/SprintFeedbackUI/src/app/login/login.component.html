@@ -11,7 +11,7 @@
                     </div>        
                     <div class="login-form"> 
                         <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">         
-                              <input type="text" class="login-field"  placeholder="Username" id="login-name" formControlName="userName" required>
+                              <input type="text" class="login-field"  placeholder="Username" [(ngModel)]="user" id="login-name" formControlName="userName" required>
                               <div *ngIf="userName.invalid && (userName.dirty || userName.touched)" class="alert alert-danger">
                                 <div *ngIf="userName.errors.required">
                                     Username is required.
@@ -20,7 +20,7 @@
                                     Username must be at least 4 characters long.
                                 </div>
                               </div>
-                              <input type="password" class="login-field"  placeholder="Password" id="login-pass" formControlName="passWord" required>
+                              <input type="password" class="login-field"  placeholder="Password" [(ngModel)]="password" id="login-pass" formControlName="passWord" required>
                               <div *ngIf="passWord.invalid && (passWord.dirty || passWord.touched)" class="alert alert-danger">
                                 <div *ngIf="passWord.errors.required">
                                     Password is required.
