@@ -344,7 +344,7 @@
           }
         }
       },
-      "Microsoft.Data.Sqlite.Core/3.1.1": {
+      "Microsoft.Data.Sqlite.Core/3.1.3": {
         "type": "package",
         "dependencies": {
           "SQLitePCLRaw.core": "2.0.2"
@@ -356,7 +356,7 @@
           "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
         }
       },
-      "Microsoft.DotNet.PlatformAbstractions/3.1.1": {
+      "Microsoft.DotNet.PlatformAbstractions/3.1.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll": {}
@@ -432,10 +432,10 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Sqlite/3.1.1": {
+      "Microsoft.EntityFrameworkCore.Sqlite/3.1.3": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Sqlite.Core": "3.1.1",
+          "Microsoft.EntityFrameworkCore.Sqlite.Core": "3.1.3",
           "SQLitePCLRaw.bundle_e_sqlite3": "2.0.2"
         },
         "compile": {
@@ -445,13 +445,13 @@
           "lib/netstandard2.0/_._": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Sqlite.Core/3.1.1": {
+      "Microsoft.EntityFrameworkCore.Sqlite.Core/3.1.3": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Data.Sqlite.Core": "3.1.1",
-          "Microsoft.DotNet.PlatformAbstractions": "3.1.1",
-          "Microsoft.EntityFrameworkCore.Relational": "3.1.1",
-          "Microsoft.Extensions.DependencyModel": "3.1.1"
+          "Microsoft.Data.Sqlite.Core": "3.1.3",
+          "Microsoft.DotNet.PlatformAbstractions": "3.1.3",
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.3",
+          "Microsoft.Extensions.DependencyModel": "3.1.3"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Sqlite.dll": {}
@@ -473,10 +473,10 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/3.1.1": {
+      "Microsoft.EntityFrameworkCore.Tools/3.1.3": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "3.1.1"
+          "Microsoft.EntityFrameworkCore.Design": "3.1.3"
         },
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -569,10 +569,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyModel/3.1.1": {
+      "Microsoft.Extensions.DependencyModel/3.1.3": {
         "type": "package",
         "dependencies": {
-          "System.Text.Json": "4.7.0"
+          "System.Text.Json": "4.7.1"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll": {}
@@ -664,11 +664,11 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration/3.1.1": {
+      "Microsoft.VisualStudio.Web.CodeGeneration/3.1.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "3.1.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "3.1.1"
+          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "3.1.2"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {}
@@ -677,7 +677,7 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.1": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.2": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2"
@@ -689,11 +689,11 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.1": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "3.1.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "3.1.1",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "3.1.2",
           "Newtonsoft.Json": "11.0.2"
         },
         "compile": {
@@ -703,10 +703,10 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.1": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "3.1.1"
+          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "3.1.2"
         },
         "compile": {
           "lib/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll": {}
@@ -715,10 +715,10 @@
           "lib/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.1": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "3.1.1"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "3.1.2"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {}
@@ -727,14 +727,14 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.1": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Razor.Language": "3.1.0",
           "Microsoft.AspNetCore.Razor.Runtime": "2.2.0",
           "Microsoft.CodeAnalysis.CSharp": "3.3.1",
           "Microsoft.CodeAnalysis.Razor": "3.1.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "3.1.1"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "3.1.2"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {}
@@ -743,11 +743,11 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.1": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "3.3.1",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Contracts": "3.1.1",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Contracts": "3.1.2",
           "Newtonsoft.Json": "11.0.2",
           "NuGet.Frameworks": "4.7.0"
         },
@@ -758,10 +758,10 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.1": {
+      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGeneration": "3.1.1"
+          "Microsoft.VisualStudio.Web.CodeGeneration": "3.1.2"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {}
@@ -2516,7 +2516,7 @@
           "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
         }
       },
-      "System.Text.Json/4.7.0": {
+      "System.Text.Json/4.7.1": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.0/System.Text.Json.dll": {}
@@ -3094,24 +3094,24 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Data.SqlClient.pdb"
       ]
     },
-    "Microsoft.Data.Sqlite.Core/3.1.1": {
-      "sha512": "AuINVQClKLK3efVFs2YZHcAupwKI9jLDL8neO/NDbi0fFM+YgT7YbJOj/+YBlnuztcbfL1gfLex4DqNbkl2Lyg==",
+    "Microsoft.Data.Sqlite.Core/3.1.3": {
+      "sha512": "7CUGlDpoS6s/JucVWBpg/hwV2Iehrd6Egbg+Rk24el5R+BZ4AlW25kY5wcsvxvqzlqXntw5hr2E9qFgQrED7fg==",
       "type": "package",
-      "path": "microsoft.data.sqlite.core/3.1.1",
+      "path": "microsoft.data.sqlite.core/3.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.Data.Sqlite.dll",
         "lib/netstandard2.0/Microsoft.Data.Sqlite.xml",
-        "microsoft.data.sqlite.core.3.1.1.nupkg.sha512",
+        "microsoft.data.sqlite.core.3.1.3.nupkg.sha512",
         "microsoft.data.sqlite.core.nuspec"
       ]
     },
-    "Microsoft.DotNet.PlatformAbstractions/3.1.1": {
-      "sha512": "5lV+Vejn4bKC3wEUPH2Z/FTYkaHBO0AVJqqTD+ATE0rP6jQARIJbtWKc+aF2TWGsxFeiARW8Y0lnMFHdLOJFqA==",
+    "Microsoft.DotNet.PlatformAbstractions/3.1.3": {
+      "sha512": "bwD01wYeN+g+Yib7XXahbRdvh5lj6PJ0si6TO6kP7n+fQsBxGy18ewJLjTZUxCwWJqX39WfQHM6idtE4QuVaiw==",
       "type": "package",
-      "path": "microsoft.dotnet.platformabstractions/3.1.1",
+      "path": "microsoft.dotnet.platformabstractions/3.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3124,7 +3124,7 @@
         "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.xml",
         "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll",
         "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.xml",
-        "microsoft.dotnet.platformabstractions.3.1.1.nupkg.sha512",
+        "microsoft.dotnet.platformabstractions.3.1.3.nupkg.sha512",
         "microsoft.dotnet.platformabstractions.nuspec"
       ]
     },
@@ -3200,30 +3200,30 @@
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Sqlite/3.1.1": {
-      "sha512": "ifkBawa9Ll7oUWQneeBgEgtGnGwERc3v1tha6z5aCQ7IuqTUb6Vakd/jkETzbS1EtaODWWsYsLQIYwfDXLhP1w==",
+    "Microsoft.EntityFrameworkCore.Sqlite/3.1.3": {
+      "sha512": "xRggLUP5O68OcpvdMorga429G9tYVb0JZOX/w779kLKbNPbCLxvr8e39xdY4EivLSBtedXr/HY2GEkKhBRilkA==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.sqlite/3.1.1",
+      "path": "microsoft.entityframeworkcore.sqlite/3.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/_._",
-        "microsoft.entityframeworkcore.sqlite.3.1.1.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlite.3.1.3.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlite.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Sqlite.Core/3.1.1": {
-      "sha512": "xgSWaNDEWKjIpZSstoKD5DeGZP0jdpoUqHF4lYkY82RtZa8sgyuLjx83XV8bBcz6qxAdHQFxXMnP5DUT0Fnc3w==",
+    "Microsoft.EntityFrameworkCore.Sqlite.Core/3.1.3": {
+      "sha512": "RI9rlHZvx5zXuY9zUrQ2yN7oKrFbgn+AA2pL/sWionvlN3sbGXr1PWt8t1vG5yDE3YqctS/ypA8gmE8LGwzOsQ==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.sqlite.core/3.1.1",
+      "path": "microsoft.entityframeworkcore.sqlite.core/3.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Sqlite.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Sqlite.xml",
-        "microsoft.entityframeworkcore.sqlite.core.3.1.1.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlite.core.3.1.3.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlite.core.nuspec"
       ]
     },
@@ -3241,17 +3241,17 @@
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Tools/3.1.1": {
-      "sha512": "rk6bBWIACTeEDFQnmslhPQYyVI4Qwy1k1XQ5NAwyZZ6Po6kGvyRs7n0tzb2M40m461vrebKhclLyR8VQYSuxig==",
+    "Microsoft.EntityFrameworkCore.Tools/3.1.3": {
+      "sha512": "/VSHVXwg8Zu5gJILvcEIVjmpQbuUg6+SEwU6pFa/RtXMPD+QSgAuzRYIfDbeVHjJuQxK3nRwkTFxorO254BLLw==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.tools/3.1.1",
+      "path": "microsoft.entityframeworkcore.tools/3.1.3",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/_._",
-        "microsoft.entityframeworkcore.tools.3.1.1.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.3.1.3.nupkg.sha512",
         "microsoft.entityframeworkcore.tools.nuspec",
         "tools/EntityFrameworkCore.PS2.psd1",
         "tools/EntityFrameworkCore.PS2.psm1",
@@ -3379,10 +3379,10 @@
         "microsoft.extensions.dependencyinjection.abstractions.nuspec"
       ]
     },
-    "Microsoft.Extensions.DependencyModel/3.1.1": {
-      "sha512": "JjNCPx5Jbk7WTjaFI9Kyq+ZRVwMJ7Ee2AmgLKraQUS8AuciAO+euxHAhlhv0AWCsVyibyRr+5USxjyc7U6VsMA==",
+    "Microsoft.Extensions.DependencyModel/3.1.3": {
+      "sha512": "NrcgRhryflmjz16bwr2krbQyhMstOhRi6dD39KEhUGRKVdXEKOppVVOOelxchIFVfNUGs5SEvcAm+binU09S3g==",
       "type": "package",
-      "path": "microsoft.extensions.dependencymodel/3.1.1",
+      "path": "microsoft.extensions.dependencymodel/3.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3397,7 +3397,7 @@
         "lib/netstandard1.6/Microsoft.Extensions.DependencyModel.xml",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
-        "microsoft.extensions.dependencymodel.3.1.1.nupkg.sha512",
+        "microsoft.extensions.dependencymodel.3.1.3.nupkg.sha512",
         "microsoft.extensions.dependencymodel.nuspec"
       ]
     },
@@ -3526,6 +3526,7 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -3534,52 +3535,52 @@
         "runtime.json"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration/3.1.1": {
-      "sha512": "As3HZwVDwdFRKrZ5gWflHTolau+Rkb3P6YAZt9Ob+tcQdlRL5y0tDYNE1DMQIWc6rcn7LtlttT3/0FLd6A9Qjg==",
+    "Microsoft.VisualStudio.Web.CodeGeneration/3.1.2": {
+      "sha512": "u8J1qrqqlUGbKmhQ3igS8/3OUTnxoDO39noeVesVPDOxnYC5JE3GNiAJC9iHnXX+kI0PfO57jizOBf76DmgPBA==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration/3.1.1",
+      "path": "microsoft.visualstudio.web.codegeneration/3.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.xml",
-        "microsoft.visualstudio.web.codegeneration.3.1.1.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.3.1.2.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.1": {
-      "sha512": "xiMVRctA0xwCbm1aYF1wbJJn77PNK/u734q4C5TnqczK4T87OqRJjbX1ldl+PJE5sw3e/8H/j9NNYzL2ux3wng==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.2": {
+      "sha512": "sLT4NR70rmIXKkTjgOmSCEttXvfEk7xQsRl1AC783CYQwuYBQKmnGwdlIsP0Ltq5m96NWP95vowJWdyVpqkIiA==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.contracts/3.1.1",
+      "path": "microsoft.visualstudio.web.codegeneration.contracts/3.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.xml",
-        "microsoft.visualstudio.web.codegeneration.contracts.3.1.1.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.contracts.3.1.2.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.contracts.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.1": {
-      "sha512": "B0CCd/7nIuk0P+9qc964SKsaM59fbeOvHGbBIGZvRH4vpCsq8eDRXQ2bfX6fqEgchX9VPAAm6CwL2Ka1aoEijg==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.2": {
+      "sha512": "aM+L4Zn5p+aqUz6nR6F6nxcF8Vk0WHN3FVNlABwdiaqlAavFtlAgXjE5CyN49gD0JDT448GwRH6wS4pme3jGuA==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.core/3.1.1",
+      "path": "microsoft.visualstudio.web.codegeneration.core/3.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.xml",
-        "microsoft.visualstudio.web.codegeneration.core.3.1.1.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.core.3.1.2.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.core.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.1": {
-      "sha512": "dPuG5OJUL/1mlToWYhu83qYQymr24n7uDRrSTn46rejVlON6OLtTqZNve5CcppR0NtHkalINrOjlY+0dXNnAKg==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.2": {
+      "sha512": "cXphrOlxlxxHnliO+IqeXi+nW86xFbnD8e+26qELx21LYE3Rw0NGvk9seKMMvWOyUsgGoQNAx8Yoo7rpj6Cptw==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.design/3.1.1",
+      "path": "microsoft.visualstudio.web.codegeneration.design/3.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3587,7 +3588,7 @@
         "lib/net461/dotnet-aspnet-codegenerator-design.xml",
         "lib/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll",
         "lib/netcoreapp3.1/dotnet-aspnet-codegenerator-design.xml",
-        "microsoft.visualstudio.web.codegeneration.design.3.1.1.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.design.3.1.2.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.design.nuspec",
         "runtimes/win-arm/lib/net461/dotnet-aspnet-codegenerator-design.exe",
         "runtimes/win-arm/lib/net461/dotnet-aspnet-codegenerator-design.xml",
@@ -3599,10 +3600,10 @@
         "runtimes/win7-x86/lib/net461/dotnet-aspnet-codegenerator-design.xml"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.1": {
-      "sha512": "z4Y4WVI93y9nbtNui8WQNeGh2/Bk6TvjXcMOJAw2b4Xm3zBj1g5f+HybxTXsX2aMXRpKbgLvCK7/sel9WYL99w==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.2": {
+      "sha512": "hXvUY8zlngVbUulP4vpGHneA42qWiRN4zZg+tz/ruzP31imXglw2e3vZ5BJcXPCtXuqweax1fykvHIkYTcQnGg==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/3.1.1",
+      "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/3.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3610,42 +3611,42 @@
         "Templates/DbContext/NewLocalDbContext.cshtml",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.xml",
-        "microsoft.visualstudio.web.codegeneration.entityframeworkcore.3.1.1.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.entityframeworkcore.3.1.2.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.1": {
-      "sha512": "fm68G+Dgzvqh2JgaimU2kyC3vUl5Fpqa//02lsCd2AaaGCZSf2qd/gGA/5RQsQlH6mBCv2Xwgv8eFgWHhF+PTw==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.2": {
+      "sha512": "+WXbODG8fMzHovZUa5TBGEn3smlUgqEDkGgct8A4R090su3Rjmzz2B3iMKfK1Nl3jO16V04QPSf5r0RFVsp2vw==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.templating/3.1.1",
+      "path": "microsoft.visualstudio.web.codegeneration.templating/3.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.xml",
-        "microsoft.visualstudio.web.codegeneration.templating.3.1.1.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.templating.3.1.2.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.templating.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.1": {
-      "sha512": "TmYCv8rvabShBKKW0k7LzlcivK1TzhJUD8pe/9u/gp2zzwF+PW21QASXKAOL4Sed/RXxxWfGQLH3cxwtAOSwIg==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.2": {
+      "sha512": "rVYCT5kF1NJumCCKx3imnWJSMaGNetXor196QJ7LQ9KfeswgM7KXGV6VdrB0wgV0cMjoK6enhCX4JsM/QOk0xw==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.utils/3.1.1",
+      "path": "microsoft.visualstudio.web.codegeneration.utils/3.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.xml",
-        "microsoft.visualstudio.web.codegeneration.utils.3.1.1.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.utils.3.1.2.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.utils.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.1": {
-      "sha512": "U+ud8PSdPOxnRMPNZcuppp5vS+PbY2nzHVNvcD1u/RYzG8jXVtrwlDkFLazbEsR7/8uym2UbdvQ5qKEcSkzPXA==",
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.2": {
+      "sha512": "tciDJICNnfCPtMXRIm+eQNxx3FdDqQ8aae7iAJt+6FXK0m3vNgQl62kXwr5PQgJGa4HRR5gxKSAObKuLIQ4EOw==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegenerators.mvc/3.1.1",
+      "path": "microsoft.visualstudio.web.codegenerators.mvc/3.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3690,6 +3691,8 @@
         "Templates/Identity/Pages/Account/Account.Register.cshtml",
         "Templates/Identity/Pages/Account/Account.RegisterConfirmation.cs.cshtml",
         "Templates/Identity/Pages/Account/Account.RegisterConfirmation.cshtml",
+        "Templates/Identity/Pages/Account/Account.ResendEmailConfirmation.cs.cshtml",
+        "Templates/Identity/Pages/Account/Account.ResendEmailConfirmation.cshtml",
         "Templates/Identity/Pages/Account/Account.ResetPassword.cs.cshtml",
         "Templates/Identity/Pages/Account/Account.ResetPassword.cshtml",
         "Templates/Identity/Pages/Account/Account.ResetPasswordConfirmation.cs.cshtml",
@@ -3805,6 +3808,8 @@
         "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.Register.cshtml",
         "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.RegisterConfirmation.cs.cshtml",
         "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.RegisterConfirmation.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.ResendEmailConfirmation.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.ResendEmailConfirmation.cshtml",
         "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.ResetPassword.cs.cshtml",
         "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.ResetPassword.cshtml",
         "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.ResetPasswordConfirmation.cs.cshtml",
@@ -3938,7 +3943,7 @@
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.xml",
         "lib/netstandard2.0/bootstrap3_identitygeneratorfilesconfig.json",
         "lib/netstandard2.0/bootstrap4_identitygeneratorfilesconfig.json",
-        "microsoft.visualstudio.web.codegenerators.mvc.3.1.1.nupkg.sha512",
+        "microsoft.visualstudio.web.codegenerators.mvc.3.1.2.nupkg.sha512",
         "microsoft.visualstudio.web.codegenerators.mvc.nuspec"
       ]
     },
@@ -3948,6 +3953,7 @@
       "path": "microsoft.win32.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4025,6 +4031,7 @@
       "path": "netstandard.library/1.6.1",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "netstandard.library.1.6.1.nupkg.sha512",
@@ -4084,6 +4091,7 @@
       "path": "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -4097,6 +4105,7 @@
       "path": "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -4110,6 +4119,7 @@
       "path": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -4123,6 +4133,7 @@
       "path": "runtime.native.system/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -4136,6 +4147,7 @@
       "path": "runtime.native.system.data.sqlclient.sni/4.4.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -4150,6 +4162,7 @@
       "path": "runtime.native.system.io.compression/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -4163,6 +4176,7 @@
       "path": "runtime.native.system.net.http/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -4176,6 +4190,7 @@
       "path": "runtime.native.system.security.cryptography.apple/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -4189,6 +4204,7 @@
       "path": "runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -4202,6 +4218,7 @@
       "path": "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -4215,6 +4232,7 @@
       "path": "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -4228,6 +4246,7 @@
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512",
@@ -4241,6 +4260,7 @@
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -4254,6 +4274,7 @@
       "path": "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -4267,6 +4288,7 @@
       "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -4280,6 +4302,7 @@
       "path": "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -4293,6 +4316,7 @@
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -4306,6 +4330,7 @@
       "path": "runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -4321,6 +4346,7 @@
       "path": "runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -4336,6 +4362,7 @@
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -4423,6 +4450,7 @@
       "path": "system.appcontext/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4477,6 +4505,7 @@
       "path": "system.buffers/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.1/.xml",
@@ -4491,6 +4520,7 @@
       "path": "system.collections/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4558,6 +4588,7 @@
       "path": "system.collections.concurrent/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4648,6 +4679,7 @@
       "path": "system.collections.nongeneric/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4686,6 +4718,7 @@
       "path": "system.collections.specialized/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4724,6 +4757,7 @@
       "path": "system.componentmodel/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4871,6 +4905,7 @@
       "path": "system.componentmodel.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4909,6 +4944,7 @@
       "path": "system.componentmodel.typeconverter/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4961,6 +4997,7 @@
       "path": "system.composition/1.0.31",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "system.composition.1.0.31.nupkg.sha512",
@@ -4973,6 +5010,7 @@
       "path": "system.composition.attributedmodel/1.0.31",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/System.Composition.AttributedModel.dll",
@@ -4987,6 +5025,7 @@
       "path": "system.composition.convention/1.0.31",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/System.Composition.Convention.dll",
@@ -5001,6 +5040,7 @@
       "path": "system.composition.hosting/1.0.31",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/System.Composition.Hosting.dll",
@@ -5015,6 +5055,7 @@
       "path": "system.composition.runtime/1.0.31",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/System.Composition.Runtime.dll",
@@ -5029,6 +5070,7 @@
       "path": "system.composition.typedparts/1.0.31",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/System.Composition.TypedParts.dll",
@@ -5064,6 +5106,7 @@
       "path": "system.console/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5101,6 +5144,7 @@
       "path": "system.diagnostics.debug/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5193,6 +5237,7 @@
       "path": "system.diagnostics.tools/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5249,6 +5294,7 @@
       "path": "system.diagnostics.tracing/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5338,6 +5384,7 @@
       "path": "system.globalization/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5405,6 +5452,7 @@
       "path": "system.globalization.calendars/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5442,6 +5490,7 @@
       "path": "system.globalization.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5482,6 +5531,7 @@
       "path": "system.io/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5562,6 +5612,7 @@
       "path": "system.io.compression/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5632,6 +5683,7 @@
       "path": "system.io.compression.zipfile/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5670,6 +5722,7 @@
       "path": "system.io.filesystem/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5707,6 +5760,7 @@
       "path": "system.io.filesystem.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5745,6 +5799,7 @@
       "path": "system.linq/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5816,6 +5871,7 @@
       "path": "system.linq.expressions/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5920,6 +5976,7 @@
       "path": "system.net.http/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/Xamarinmac20/_._",
@@ -6001,6 +6058,7 @@
       "path": "system.net.nameresolution/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6042,6 +6100,7 @@
       "path": "system.net.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6120,6 +6179,7 @@
       "path": "system.net.sockets/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6157,6 +6217,7 @@
       "path": "system.objectmodel/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6226,6 +6287,7 @@
       "path": "system.private.datacontractserialization/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.3/System.Private.DataContractSerialization.dll",
@@ -6241,6 +6303,7 @@
       "path": "system.reflection/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6321,6 +6384,7 @@
       "path": "system.reflection.emit/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6356,6 +6420,7 @@
       "path": "system.reflection.emit.ilgeneration/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6400,6 +6465,7 @@
       "path": "system.reflection.emit.lightweight/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6444,6 +6510,7 @@
       "path": "system.reflection.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6521,6 +6588,7 @@
       "path": "system.reflection.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6577,6 +6645,7 @@
       "path": "system.reflection.typeextensions/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6630,6 +6699,7 @@
       "path": "system.resources.resourcemanager/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6686,6 +6756,7 @@
       "path": "system.runtime/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6836,6 +6907,7 @@
       "path": "system.runtime.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6916,6 +6988,7 @@
       "path": "system.runtime.handles/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6953,6 +7026,7 @@
       "path": "system.runtime.interopservices/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -7045,6 +7119,7 @@
       "path": "system.runtime.interopservices.runtimeinformation/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -7079,6 +7154,7 @@
       "path": "system.runtime.numerics/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -7223,6 +7299,7 @@
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -7337,6 +7414,7 @@
       "path": "system.security.cryptography.algorithms/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -7377,6 +7455,7 @@
       "path": "system.security.cryptography.cng/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/net46/System.Security.Cryptography.Cng.dll",
@@ -7404,6 +7483,7 @@
       "path": "system.security.cryptography.csp/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -7435,6 +7515,7 @@
       "path": "system.security.cryptography.encoding/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -7475,6 +7556,7 @@
       "path": "system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll",
@@ -7490,6 +7572,7 @@
       "path": "system.security.cryptography.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -7559,6 +7642,7 @@
       "path": "system.security.cryptography.x509certificates/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -7719,6 +7803,7 @@
       "path": "system.text.encoding/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -7821,6 +7906,7 @@
       "path": "system.text.encoding.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -7901,13 +7987,14 @@
         "version.txt"
       ]
     },
-    "System.Text.Json/4.7.0": {
-      "sha512": "IPq/x/d5nAcnD3vIyM3AbPOaTgcqrh0AqPSx7U53UFu3M6k1TH1u/eXc9/h4jm/3mpP1WRUpevlPY4PACd7AWw==",
+    "System.Text.Json/4.7.1": {
+      "sha512": "XwzMbct3iNepJaFylN1+l8weWlFburEzXidqleSsLvSXdHSIJHEKtRVKHPlpWcFmJX6k3goPFfVgUfp40RR+bg==",
       "type": "package",
-      "path": "system.text.json/4.7.0",
+      "path": "system.text.json/4.7.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net461/System.Text.Json.dll",
@@ -7916,7 +8003,7 @@
         "lib/netcoreapp3.0/System.Text.Json.xml",
         "lib/netstandard2.0/System.Text.Json.dll",
         "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.4.7.0.nupkg.sha512",
+        "system.text.json.4.7.1.nupkg.sha512",
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -7928,6 +8015,7 @@
       "path": "system.text.regularexpressions/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -8011,6 +8099,7 @@
       "path": "system.threading/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -8081,6 +8170,7 @@
       "path": "system.threading.tasks/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -8183,6 +8273,7 @@
       "path": "system.threading.timer/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -8237,6 +8328,7 @@
       "path": "system.xml.readerwriter/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -8308,6 +8400,7 @@
       "path": "system.xml.xdocument/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -8377,6 +8470,7 @@
       "path": "system.xml.xmldocument/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -8410,11 +8504,12 @@
       ]
     },
     "System.Xml.XmlSerializer/4.3.0": {
-      "sha512": "VShQJhOxgD/5M2Z1IWm1vMaSqlbjo1zdFf8H7Ahte6bTvSUhUko/gDpAVVhGgGgTDeue4QyNg1fu1Zz2GKSEuQ==",
+      "sha512": "MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "type": "package",
       "path": "system.xml.xmlserializer/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -8484,29 +8579,25 @@
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.EntityFrameworkCore.Design >= 3.1.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.3",
-      "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.1",
-      "Microsoft.EntityFrameworkCore.Tools >= 3.1.1",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.1"
+      "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.3",
+      "Microsoft.EntityFrameworkCore.Tools >= 3.1.3",
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Priyanka.Dhananjaya\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Mohamed.Rilwan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Priyanka.Dhananjaya\\source\\repos\\Sprint_FeedBack_POC\\InternsFeedback\\InternsFeedback.csproj",
+      "projectUniqueName": "C:\\Users\\Mohamed.Rilwan\\Desktop\\Intern-Feedback\\Sprint_FeedBack_POC\\InternsFeedback\\InternsFeedback.csproj",
       "projectName": "InternsFeedback",
-      "projectPath": "C:\\Users\\Priyanka.Dhananjaya\\source\\repos\\Sprint_FeedBack_POC\\InternsFeedback\\InternsFeedback.csproj",
-      "packagesPath": "C:\\Users\\Priyanka.Dhananjaya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Priyanka.Dhananjaya\\source\\repos\\Sprint_FeedBack_POC\\InternsFeedback\\obj\\",
+      "projectPath": "C:\\Users\\Mohamed.Rilwan\\Desktop\\Intern-Feedback\\Sprint_FeedBack_POC\\InternsFeedback\\InternsFeedback.csproj",
+      "packagesPath": "C:\\Users\\Mohamed.Rilwan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mohamed.Rilwan\\Desktop\\Intern-Feedback\\Sprint_FeedBack_POC\\InternsFeedback\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Priyanka.Dhananjaya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mohamed.Rilwan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8542,17 +8633,17 @@
           },
           "Microsoft.EntityFrameworkCore.Sqlite": {
             "target": "Package",
-            "version": "[3.1.1, )"
+            "version": "[3.1.3, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[3.1.1, )"
+            "version": "[3.1.3, )"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "[3.1.1, )"
+            "version": "[3.1.2, )"
           }
         },
         "imports": [
@@ -8573,7 +8664,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

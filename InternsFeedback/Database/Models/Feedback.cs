@@ -1,15 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace InternsFeedback.Database.Entities
+namespace InternsFeedback.Models
 {
-    public class Feedback
+    public partial class Feedback
     {
-        [Key]
         public int FeedbackId { get; set; }
         public string ProblemSolvingAnalyzingSkill { get; set; }
         public string TechnicalExcellence { get; set; }
@@ -19,12 +14,10 @@ namespace InternsFeedback.Database.Entities
         public string Communication { get; set; }
         public string Discipline { get; set; }
         public string OverallTechnicalCompitency { get; set; }
-        [ForeignKey("User")]
-        public int UserId { get; set; }
-        [ForeignKey("Interns")]
         public int InternId { get; set; }
+        public int UserId { get; set; }
 
-        public User user { get; set; }
-        public Interns interns { get; set; }
+        public virtual Intern Intern { get; set; }
+        public virtual User User { get; set; }
     }
 }
