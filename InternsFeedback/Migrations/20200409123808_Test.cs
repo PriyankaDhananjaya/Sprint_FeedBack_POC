@@ -1,29 +1,33 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace InternsFeedback.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Test : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "User",
+                name: "Users",
                 columns: table => new
                 {
-                    UserId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserName = table.Column<string>(nullable: false),
-                    Password = table.Column<string>(nullable: false),
+                    FirstName = table.Column<string>(nullable: true),
+                    LastName = table.Column<string>(nullable: true),
+                    Username = table.Column<string>(nullable: true),
+                    PasswordHash = table.Column<byte[]>(nullable: true),
+                    PasswordSalt = table.Column<byte[]>(nullable: true),
                     Contact = table.Column<string>(nullable: true),
                     Role = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_User", x => x.UserId);
+                    table.PrimaryKey("PK_Users", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Project",
+                name: "Projects",
                 columns: table => new
                 {
                     ProjectId = table.Column<int>(nullable: false)
@@ -33,17 +37,17 @@ namespace InternsFeedback.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Project", x => x.ProjectId);
+                    table.PrimaryKey("PK_Projects", x => x.ProjectId);
                     table.ForeignKey(
-                        name: "FK_Project_User_UserId",
+                        name: "FK_Projects_Users_UserId",
                         column: x => x.UserId,
-                        principalTable: "User",
-                        principalColumn: "UserId",
+                        principalTable: "Users",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Intern",
+                name: "Interns",
                 columns: table => new
                 {
                     InternId = table.Column<int>(nullable: false)
@@ -54,23 +58,23 @@ namespace InternsFeedback.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Intern", x => x.InternId);
+                    table.PrimaryKey("PK_Interns", x => x.InternId);
                     table.ForeignKey(
                         name: "FK_Intern_User_UserId",
                         column: x => x.CreatedBy,
-                        principalTable: "User",
-                        principalColumn: "UserId",
+                        principalTable: "Users",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Intern_ProjectId",
                         column: x => x.ProjectId,
-                        principalTable: "Project",
+                        principalTable: "Projects",
                         principalColumn: "ProjectId",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Feedback",
+                name: "Feedbacks",
                 columns: table => new
                 {
                     FeedbackId = table.Column<int>(nullable: false)
@@ -88,60 +92,60 @@ namespace InternsFeedback.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Feedback", x => x.FeedbackId);
+                    table.PrimaryKey("PK_Feedbacks", x => x.FeedbackId);
                     table.ForeignKey(
-                        name: "FK_Feedback_Intern_InternId",
+                        name: "FK_Feedbacks_Interns_InternId",
                         column: x => x.InternId,
-                        principalTable: "Intern",
+                        principalTable: "Interns",
                         principalColumn: "InternId",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Feedback_User_UserId",
+                        name: "FK_Feedbacks_Users_UserId",
                         column: x => x.UserId,
-                        principalTable: "User",
-                        principalColumn: "UserId",
+                        principalTable: "Users",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Feedback_InternId",
-                table: "Feedback",
+                name: "IX_Feedbacks_InternId",
+                table: "Feedbacks",
                 column: "InternId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Feedback_UserId",
-                table: "Feedback",
+                name: "IX_Feedbacks_UserId",
+                table: "Feedbacks",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Intern_CreatedBy",
-                table: "Intern",
+                name: "IX_Interns_CreatedBy",
+                table: "Interns",
                 column: "CreatedBy");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Intern_ProjectId",
-                table: "Intern",
+                name: "IX_Interns_ProjectId",
+                table: "Interns",
                 column: "ProjectId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Project_UserId",
-                table: "Project",
+                name: "IX_Projects_UserId",
+                table: "Projects",
                 column: "UserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Feedback");
+                name: "Feedbacks");
 
             migrationBuilder.DropTable(
-                name: "Intern");
+                name: "Interns");
 
             migrationBuilder.DropTable(
-                name: "Project");
+                name: "Projects");
 
             migrationBuilder.DropTable(
-                name: "User");
+                name: "Users");
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace InternsFeedback.Models
+namespace InternsFeedback.Database.Entities
 {
     public partial class Feedback
     {

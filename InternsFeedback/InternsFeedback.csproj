@@ -5,41 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20200408031647_remove.cs" />
-    <Compile Remove="Migrations\20200408031647_remove.Designer.cs" />
-    <Compile Remove="Migrations\20200408035103_initial2.cs" />
-    <Compile Remove="Migrations\20200408035103_initial2.Designer.cs" />
-    <Compile Remove="Migrations\20200408040126_initial3.cs" />
-    <Compile Remove="Migrations\20200408040126_initial3.Designer.cs" />
-    <Compile Remove="Migrations\20200408045847_new5.cs" />
-    <Compile Remove="Migrations\20200408045847_new5.Designer.cs" />
-    <Compile Remove="Migrations\20200408045954_new5.cs" />
-    <Compile Remove="Migrations\20200408045954_new5.Designer.cs" />
-    <Compile Remove="Migrations\20200408050113_new5.cs" />
-    <Compile Remove="Migrations\20200408050113_new5.Designer.cs" />
-    <Compile Remove="Migrations\20200408050152_new6.cs" />
-    <Compile Remove="Migrations\20200408050152_new6.Designer.cs" />
-    <Compile Remove="Migrations\20200408050613_new6.cs" />
-    <Compile Remove="Migrations\20200408050613_new6.Designer.cs" />
-    <Compile Remove="Migrations\20200408050802_new6.cs" />
-    <Compile Remove="Migrations\20200408050802_new6.Designer.cs" />
-    <Compile Remove="Migrations\20200408051147_new6.cs" />
-    <Compile Remove="Migrations\20200408051147_new6.Designer.cs" />
-    <Compile Remove="Migrations\20200408051618_test1.cs" />
-    <Compile Remove="Migrations\20200408051618_test1.Designer.cs" />
-    <Compile Remove="Migrations\20200408051752_test2.cs" />
-    <Compile Remove="Migrations\20200408051752_test2.Designer.cs" />
-    <Compile Remove="Migrations\20200408051900_test5.cs" />
-    <Compile Remove="Migrations\20200408051900_test5.Designer.cs" />
-    <Compile Remove="Migrations\20200408052020_new6.cs" />
-    <Compile Remove="Migrations\20200408052020_new6.Designer.cs" />
-    <Compile Remove="Migrations\20200408052133_new6.cs" />
-    <Compile Remove="Migrations\20200408052133_new6.Designer.cs" />
-    <Compile Remove="Migrations\20200408052703_testing.cs" />
-    <Compile Remove="Migrations\20200408052703_testing.Designer.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <COMReference Include="ConfigurationLib.dll">
       <Guid>65ab85e3-2aef-4664-a0be-95089707368b</Guid>
       <VersionMajor>1</VersionMajor>
@@ -51,6 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -62,6 +30,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ServiceContract\Dtos\" />
   </ItemGroup>
 
 

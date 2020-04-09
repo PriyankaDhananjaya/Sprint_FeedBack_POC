@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using InternsFeedback.Models;
+using InternsFeedback.Datatbase.Entities;
+using InternsFeedback.Database.Entities;
 
 namespace InternsFeedback.Controllers
 {
@@ -24,14 +26,14 @@ namespace InternsFeedback.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Intern>>> GetIntern()
         {
-            return await _context.Intern.ToListAsync();
+            return await _context.Interns.ToListAsync();
         }
 
         // GET: api/Interns/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Intern>> GetIntern(int id)
         {
-            var intern = await _context.Intern.FindAsync(id);
+            var intern = await _context.Interns.FindAsync(id);
 
             if (intern == null)
             {
@@ -75,7 +77,7 @@ namespace InternsFeedback.Controllers
         [HttpPost]
         public async Task<ActionResult<Intern>> PostIntern(Intern intern)
         {
-            _context.Intern.Add(intern);
+            _context.Interns.Add(intern);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetIntern", new { id = intern.InternId }, intern);
@@ -85,13 +87,13 @@ namespace InternsFeedback.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Intern>> DeleteIntern(int id)
         {
-            var intern = await _context.Intern.FindAsync(id);
+            var intern = await _context.Interns.FindAsync(id);
             if (intern == null)
             {
                 return NotFound();
             }
 
-            _context.Intern.Remove(intern);
+            _context.Interns.Remove(intern);
             await _context.SaveChangesAsync();
 
             return intern;
@@ -99,7 +101,7 @@ namespace InternsFeedback.Controllers
 
         private bool InternExists(int id)
         {
-            return _context.Intern.Any(e => e.InternId == id);
+            return _context.Interns.Any(e => e.InternId == id);
         }
     }
 }

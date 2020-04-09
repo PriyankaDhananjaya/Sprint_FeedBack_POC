@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace InternsFeedback.Models
+namespace InternsFeedback.Database.Entities
 {
     public partial class User
     {
@@ -12,11 +12,12 @@ namespace InternsFeedback.Models
             Project = new HashSet<Project>();
         }
 
-        public int UserId { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
-        //public byte[] PasswordHash { get; set; }
-        //public byte[] PasswordSalt { get; set; }
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Username { get; set; }
+        public byte[] PasswordHash { get; set; }
+        public byte[] PasswordSalt { get; set; }
         public string Contact { get; set; }
         public int Role { get; set; }
 

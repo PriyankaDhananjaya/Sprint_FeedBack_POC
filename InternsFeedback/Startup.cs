@@ -5,14 +5,26 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using InternsFeedback.Models;
+using AutoMapper;
+using System;
+using InternsFeedback.Helpers;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Threading.Tasks;
+using Microsoft.IdentityModel.Tokens;
+using InternsFeedback.ServiceContract;
+using InternsFeedback.Datatbase.Entities;
 
 namespace InternsFeedback
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private readonly IWebHostEnvironment _env;
+        private readonly IConfiguration _configuration;
+        public Startup(IWebHostEnvironment env,IConfiguration configuration)
         {
-            Configuration = configuration;
+            _env = env;
+            _configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
@@ -20,10 +32,58 @@ namespace InternsFeedback
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<InternsFeedbackContext>(options =>
-              options.UseSqlServer(Configuration.GetConnectionString("InternsFeedbackConnetion")));
+               services.AddDbContext<InternsFeedbackContext>(opt =>
+               opt.UseSqlServer("User"));
+           
             services.AddControllers();
+
+            services.AddCors();            
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            // configure strongly typed settings objects
+            var appSettingsSection = _configuration.GetSection("AppSettings");
+            services.Configure<AppSetting>(appSettingsSection);
+
+            // configure jwt authentication
+            var appSettings = appSettingsSection.Get<AppSetting>();
+            var key = Encoding.ASCII.GetBytes(appSettings.Secret);
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(x =>
+            {
+                x.Events = new JwtBearerEvents
+                {
+                    OnTokenValidated = context =>
+                    {
+                        var userService = context.HttpContext.RequestServices.GetRequiredService<IUserService>();
+                        var userId = int.Parse(context.Principal.Identity.Name);
+                        var user = userService.GetById(userId);
+                        if (user == null)
+                        {
+                            // return unauthorized if user no longer exists
+                            context.Fail("Unauthorized");
+                        }
+                        return Task.CompletedTask;
+                    }
+                };
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
+
+            // configure DI for application services
+            services.AddScoped<IUserService, UserService>();
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -36,6 +96,12 @@ namespace InternsFeedback
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors(x => x
+             .AllowAnyOrigin()
+             .AllowAnyMethod()
+             .AllowAnyHeader());
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
@@ -46,3 +112,4 @@ namespace InternsFeedback
         }
     }
 }
+

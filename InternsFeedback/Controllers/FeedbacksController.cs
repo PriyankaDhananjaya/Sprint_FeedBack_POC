@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using InternsFeedback.Models;
+using InternsFeedback.Datatbase.Entities;
+using InternsFeedback.Database.Entities;
 
 namespace InternsFeedback.Controllers
 {
@@ -24,14 +26,14 @@ namespace InternsFeedback.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Feedback>>> GetFeedback()
         {
-            return await _context.Feedback.ToListAsync();
+            return await _context.Feedbacks.ToListAsync();
         }
 
         // GET: api/Feedbacks/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Feedback>> GetFeedback(int id)
         {
-            var feedback = await _context.Feedback.FindAsync(id);
+            var feedback = await _context.Feedbacks.FindAsync(id);
 
             if (feedback == null)
             {
@@ -73,7 +75,7 @@ namespace InternsFeedback.Controllers
         [HttpPost]
         public async Task<ActionResult<Feedback>> PostFeedback(Feedback feedback)
         {
-            _context.Feedback.Add(feedback);
+            _context.Feedbacks.Add(feedback);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetFeedback", new { id = feedback.FeedbackId }, feedback);
@@ -83,13 +85,13 @@ namespace InternsFeedback.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Feedback>> DeleteFeedback(int id)
         {
-            var feedback = await _context.Feedback.FindAsync(id);
+            var feedback = await _context.Feedbacks.FindAsync(id);
             if (feedback == null)
             {
                 return NotFound();
             }
 
-            _context.Feedback.Remove(feedback);
+            _context.Feedbacks.Remove(feedback);
             await _context.SaveChangesAsync();
 
             return feedback;
@@ -97,7 +99,7 @@ namespace InternsFeedback.Controllers
 
         private bool FeedbackExists(int id)
         {
-            return _context.Feedback.Any(e => e.FeedbackId == id);
+            return _context.Feedbacks.Any(e => e.FeedbackId == id);
         }
     }
 }

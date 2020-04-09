@@ -1,5 +1,3 @@
-C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\runtimes\linux-arm\native\libe_sqlite3.so
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -9,10 +7,14 @@ C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedb
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\InternsFeedback.runtimeconfig.dev.json
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\InternsFeedback.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\InternsFeedback.pdb
+C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
@@ -38,6 +40,11 @@ C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedb
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
@@ -58,6 +65,7 @@ C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedb
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\System.Text.Json.dll
@@ -119,6 +127,7 @@ C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedb
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\runtimes\alpine-x64\native\libe_sqlite3.so
+C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\runtimes\linux-arm\native\libe_sqlite3.so
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\runtimes\linux-arm64\native\libe_sqlite3.so
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\runtimes\linux-armel\native\libe_sqlite3.so
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\runtimes\linux-musl-x64\native\libe_sqlite3.so
@@ -135,13 +144,15 @@ C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedb
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\bin\Debug\netcoreapp3.1\Interop.ConfigurationLib.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\obj\Debug\netcoreapp3.1\Interop.ConfigurationLib.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\obj\Debug\netcoreapp3.1\InternsFeedback.csproj.ResolveComReference.cache
-C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\obj\Debug\netcoreapp3.1\staticwebassets\InternsFeedback.StaticWebAssets.Manifest.cache
-C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\obj\Debug\netcoreapp3.1\staticwebassets\InternsFeedback.StaticWebAssets.xml
+C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\obj\Debug\netcoreapp3.1\InternsFeedback.csproj.CoreCompileInputs.cache
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\obj\Debug\netcoreapp3.1\InternsFeedback.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\obj\Debug\netcoreapp3.1\InternsFeedback.AssemblyInfoInputs.cache
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\obj\Debug\netcoreapp3.1\InternsFeedback.AssemblyInfo.cs
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\obj\Debug\netcoreapp3.1\InternsFeedback.RazorTargetAssemblyInfo.cache
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\obj\Debug\netcoreapp3.1\InternsFeedback.csproj.CopyComplete
+C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\obj\Debug\netcoreapp3.1\staticwebassets\InternsFeedback.StaticWebAssets.Manifest.cache
+C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\obj\Debug\netcoreapp3.1\staticwebassets\InternsFeedback.StaticWebAssets.xml
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\obj\Debug\netcoreapp3.1\InternsFeedback.dll
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\obj\Debug\netcoreapp3.1\InternsFeedback.pdb
+C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\obj\Debug\netcoreapp3.1\InternsFeedback.genruntimeconfig.cache
 C:\Users\Mohamed.Rilwan\Desktop\Intern-Feedback\Sprint_FeedBack_POC\InternsFeedback\obj\Debug\netcoreapp3.1\InternsFeedback.csprojAssemblyReference.cache
