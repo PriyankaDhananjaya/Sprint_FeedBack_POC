@@ -16,3 +16,11 @@ table {
     width: 30%;
     margin-left: 35%;
   }
+
+  .searchKey:hover{
+    background-color: darkgrey;
+    border-radius: 60%;
+    justify-content: center;
+    margin-left: 20px;
+    align-content: center;
+  }

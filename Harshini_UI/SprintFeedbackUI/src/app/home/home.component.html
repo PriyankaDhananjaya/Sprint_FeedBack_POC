@@ -10,7 +10,7 @@
 <mat-form-field appearance="outline" class="searchBox">
   <mat-label>Search</mat-label>
   <input matInput [(ngModel)]="searchKey" placeholder="Search" (keyup)="applyFilter()" >
-  <mat-icon matSuffix *ngIf="searchKey" (click)="onSearchClear()">clear</mat-icon>  
+  <mat-icon matSuffix *ngIf="searchKey" (click)="onSearchClear()" class="searchKey">clear</mat-icon>  
 </mat-form-field>
 <div class="mat-elevation-z8">
 

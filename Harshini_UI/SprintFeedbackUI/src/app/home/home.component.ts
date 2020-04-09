@@ -1,11 +1,13 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import HC_stock from 'highcharts/modules/stock';
+import Exporting from 'highcharts/modules/exporting';
 import {MatPaginator} from '@angular/material/paginator';
 import { UserDataService } from '../Service/user-data.service';
 import { feedback } from '../Models/Data.model';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatSort} from '@angular/material/sort';
+
 @Component({
   selector: 'app-home', 
   templateUrl: './home.component.html',
@@ -32,6 +34,7 @@ export class HomeComponent implements OnInit {
     this._userDataService.getFeedback().subscribe(interns => {this.dataSource.data = interns});
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+    
     this.chartOptions = {
       chart: {
         type: 'column'
@@ -89,9 +92,13 @@ export class HomeComponent implements OnInit {
   };
 
     HC_stock(Highcharts);
+    Exporting(Highcharts);
+    
 
     setTimeout(() => {
-      window.dispatchEvent(new Event('resize'));
+      window.dispatchEvent(
+        new Event('resize')
+        );
     }, 300);
 
   

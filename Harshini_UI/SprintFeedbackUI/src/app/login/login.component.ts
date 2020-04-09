@@ -10,7 +10,9 @@ import { UserDataService } from '../Service/user-data.service';
 })
 export class LoginComponent {
 
-  public userList;
+  public userList ;
+
+  public checkUser : string;
   public user : string;
   public password:string;
   
@@ -34,13 +36,16 @@ export class LoginComponent {
 
     console.log(this.profileForm.value);
     
-    this.userList =  this._userDataService.getUser().subscribe(user => this.userList = user);
-    debugger;
+    //this.userList =  this._userDataService.getUser().subscribe(user => this.userList = user);
+  
+    //this.checkUser = this.userList.where({userName:user});
+     //console.log(this.userList[0]);
     
-    // if(this.userList.userName == user && this.userList.passWord == this.password){
-    //   this.route.navigate(['/dashboard']);
-    // }
-    this.route.navigate(['/dashboard']);
+    //this.userList["userName"] === this.user && this.userList.passWord === this.password
+      
+      this.route.navigate(['/dashboard']);
+    
+    //this.route.navigate(['/dashboard']);
   }
 }
 

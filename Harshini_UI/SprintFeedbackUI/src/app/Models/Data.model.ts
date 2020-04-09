@@ -10,21 +10,21 @@ export class user{
 export class project {
     id: number;
     projectName: string;
+    projectDescription: string;
     chiefMentor: string;
     mentor1: string;
     mentor2: string;
-    mentor3: string;
-    buddy: string;
   }
 
   export class intern{
+    id:number;
+    
     internName: string;
-    collegeName: string;
     project: string;  
   }
 
   export class feedback{
-    reviewerName: string;
+    userName: string;
     internName: string;
     problemSolving: number;
     technicalExcellence: number; 
