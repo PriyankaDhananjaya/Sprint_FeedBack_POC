@@ -1,0 +1,27 @@
+
+.leftside , .rightside {
+    height: 87%;
+    width: 100%;
+    overflow: hidden;
+}
+.background {
+    background-color:currentColor;
+    
+}
+.nav-link{
+    color:#074271f2;
+}
+
+.dash {
+    background-color:ghostwhite;
+}
+
+
+.left {
+    margin-left: 3px;
+    margin-top: 0px;
+}
+
+.container-fluid {
+    overflow-x: auto;
+}

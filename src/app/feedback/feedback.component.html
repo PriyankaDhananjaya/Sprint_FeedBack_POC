@@ -1,0 +1,177 @@
+<div class="mar ">
+  <table class="table ml-1 table-hover">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Intern Name</th>
+        <th scope="col">Problem Solving & Analyzing Skill</th>
+        <th scope="col">Technical Excellence</th>
+        <th scope="col">Project Delivery</th>
+        <th scope="col">Project Process Compliance</th>
+        <th scope="col">Teaming </th>
+        <th scope="col">Communication</th>
+        <th scope="col">Discipline </th>
+        <th scope="col">Overall technical compitency </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let feedback of feedbacks">
+        <td><a href="" data-toggle="modal" data-target=".bd-example-modal-sm">{{feedback.internId}}</a></td>
+        <td>{{feedback.problemSolvingAnalyzingSkill}}</td>
+        <td>{{feedback.technicalExcellence}}</td>
+        <td>{{feedback.projectDelivery}}</td>
+        <td>{{feedback.projectProcessCompliance}}</td>
+        <td>{{feedback.teaming}}</td>
+        <td>{{feedback.communication}}</td>
+        <td>{{feedback.discipline}}</td>
+        <td>{{feedback.overallTechnicalCompitency}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="form-group ml-1">
+    <button class="btn-sm btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Give Feedback</button>
+  </div>
+  <button (click)="generatePdf()">Open PDF</button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-top modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Intern Feedback</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="feedbackForm" class="back_img" (ngSubmit)="submitFeedback()"
+          style="background-image: url('assets/grey.jpeg')">
+          <div class=" row ">
+            <div class="col-6">
+              <div class="form-group col-10">
+                <label class="white" for="InternName">Intern Name</label>
+                <select formControlName="InternName" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.InternName.errors }">
+                  <option *ngFor="let intern of interns" [value]="opt">{{intern}}</option>
+                </select>
+                <div *ngIf="submitted && f.InternName.errors" class="invalid-feedback">
+                  <div *ngIf="f.InternName.errors.required"> InternName is required</div>
+                </div>
+              </div>
+              <div class="form-group col-10">
+                <label class="white" for="ProblemSolvingAnalyzingSkill">Problem Solving & Analyzing Skill</label>
+                <input type="text" formControlName="ProblemSolvingAnalyzingSkill" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.ProblemSolvingAnalyzingSkill.errors }" />
+                <div *ngIf="submitted && f.ProblemSolvingAnalyzingSkill.errors" class="invalid-feedback">
+                  <div *ngIf="f.ProblemSolvingAnalyzingSkill.errors.required">ProblemSolvingAnalyzingSkill is required</div>
+                </div>
+              </div>
+              <div class="form-group col-10">
+                <label class="white" for="ProjectProcessCompliance">Project Process Compliance</label>
+                <input type="text" formControlName="ProjectProcessCompliance" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.ProjectProcessCompliance.errors }" />
+                <div *ngIf="submitted && f.ProjectProcessCompliance.errors" class="invalid-feedback">
+                  <div *ngIf="f.ProjectProcessCompliance.errors.required">Project Process Compliance is required</div>
+                </div>
+              </div>
+              <div class="form-group col-10">
+                <label class="white" for="TechnicalExcellence">Technical Excellence</label>
+                <input type="text" formControlName="TechnicalExcellence" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.TechnicalExcellence.errors }" />
+                <div *ngIf="submitted && f.TechnicalExcellence.errors" class="invalid-feedback">
+                  <div *ngIf="f.TechnicalExcellence.errors.required">TechnicalExcellence is required</div>
+                </div>
+              </div>
+              <div class="form-group col-10">
+                <label class="white" for="OverallTechnicalCompitency">Overall technical compitency</label>
+                <input type="text" formControlName="OverallTechnicalCompitency" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.OverallTechnicalCompitency.errors }" />
+                <div *ngIf="submitted && f.OverallTechnicalCompitency.errors" class="invalid-feedback">
+                  <div *ngIf="f.OverallTechnicalCompitency.errors.required">Overall Technical Compitency is required</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group col-8">
+                <label class="white" for="Manager">Manager</label>
+                <select formControlName="Manager" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.Manager.errors }">
+                  <option *ngFor="let manager of managers" [value]="opt">{{manager}}</option>
+                </select>
+                <div *ngIf="submitted && f.Manager.errors" class="invalid-feedback">
+                  <div *ngIf="f.Manager.errors.required"> Manager is required</div>
+                </div>
+              </div>
+              <div class="form-group col-8">
+                <label class="white" for="ProjectDelivery">Project Delivery</label>
+                <input type="text" formControlName="ProjectDelivery" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.ProjectDelivery.errors }" />
+                <div *ngIf="submitted && f.ProjectDelivery.errors" class="invalid-feedback">
+                  <div *ngIf="f.ProjectDelivery.errors.required">Project Delivery is required</div>
+                </div>
+              </div>
+              <div class="form-group col-8">
+                <label class="white" for="Teaming">Teaming</label>
+                <input type="text" formControlName="Teaming" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.Teaming.errors }" />
+                <div *ngIf="submitted && f.Teaming.errors" class="invalid-feedback">
+                  <div *ngIf="f.Teaming.errors.required">Teaming is required</div>
+                </div>
+              </div>
+              <div class="form-group col-8">
+                <label class="white" for="Communication">Communication</label>
+                <input type="text" formControlName="Communication" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.Communication.errors }" />
+                <div *ngIf="submitted && f.Communication.errors" class="invalid-feedback">
+                  <div *ngIf="f.Communication.errors.required">Communication is required</div>
+                </div>
+              </div>
+              <div class="form-group col-8">
+                <label class="white" for="Discipline">Discipline</label>
+                <input type="text" formControlName="Discipline" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.Discipline.errors }" />
+                <div *ngIf="submitted && f.Discipline.errors" class="invalid-feedback">
+                  <div *ngIf="f.Discipline.errors.required">Discipline is required</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <button [disabled]="loading" class="btn-sm add btn-primary">
+              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+              Submit Feedback
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Intern Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="row mb-3">
+        <div class="col-6">
+          <div class="col-8">InternId:</div>
+          <div class="col-8">InternName:</div>
+          <div class="col-8">Manager:</div>
+          <div class="col-8">Resume:</div>
+        </div>
+        <div class="col-6">
+          <div class="col-8">1002</div>
+          <div class="col-8">Kruthika</div>
+          <div class="col-8">Sujith</div>
+          <div class="col-8">Resume:</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

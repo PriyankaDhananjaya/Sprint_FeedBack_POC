@@ -1,0 +1,56 @@
+[
+    {
+        "internId": 2,
+        "internName": "kruthika",
+        "createdBy": 1,
+        "projectId": 1,
+        "createdByNavigation": null,
+        "project": null,
+        "feedback": []
+    },
+    {
+        "internId": 1002,
+        "internName": "arun",
+        "createdBy": 1,
+        "projectId": 1,
+        "createdByNavigation": null,
+        "project": null,
+        "feedback": []
+    },
+    {
+        "internId": 1003,
+        "internName": "abhishek",
+        "createdBy": 1,
+        "projectId": 1,
+        "createdByNavigation": null,
+        "project": null,
+        "feedback": []
+    },
+    {
+        "internId": 1004,
+        "internName": "akil",
+        "createdBy": 3,
+        "projectId": 3,
+        "createdByNavigation": null,
+        "project": null,
+        "feedback": []
+    },
+    {
+        "internId": 1006,
+        "internName": "sindhu",
+        "createdBy": 3,
+        "projectId": 1,
+        "createdByNavigation": null,
+        "project": null,
+        "feedback": []
+    },
+    {
+        "internId": 1007,
+        "internName": "chethan",
+        "createdBy": 3,
+        "projectId": 3,
+        "createdByNavigation": null,
+        "project": null,
+        "feedback": []
+    }
+]

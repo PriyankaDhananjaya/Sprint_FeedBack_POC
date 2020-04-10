@@ -1,0 +1,11 @@
+
+.leftside , .rightside {
+    height: 100vh;
+    width: 100%;
+}
+.nav-link{
+    color:aliceblue;
+}
+li:hover {
+    background-color: rgb(126, 150, 160); 
+  }

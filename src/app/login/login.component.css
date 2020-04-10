@@ -1,0 +1,44 @@
+.invalid-field {
+    margin-top: .25rem;
+    border-color:  #dc3545;
+    color: #dc3545;
+}
+.danger {
+    font-size: 80%;
+    color: #dc3545;
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+  }
+.login_card{
+    padding: 50px;
+    margin: 7rem;
+}
+.font {
+    margin-bottom: 2.5rem;
+    font-size: 3.5rem;
+    color: rgb(240, 240, 248);
+}
+.white {
+    color: rgb(240, 240, 248);
+}
+.img {
+    width: 100%;
+    height: auto;
+  }
+
+.back_img {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.left {
+  margin-left: 25rem;
+}

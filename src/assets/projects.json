@@ -1,0 +1,16 @@
+[
+    {
+        "projectId": 1,
+        "projectName": "POC_PORTAL",
+        "userId": 1,
+        "user": null,
+        "intern": []
+    },
+    {
+        "projectId": 3,
+        "projectName": "POC_INTERN_FEEDBACK",
+        "userId": 3,
+        "user": null,
+        "intern": []
+    }
+]

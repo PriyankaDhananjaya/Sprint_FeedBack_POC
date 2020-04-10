@@ -1,0 +1,32 @@
+[
+  {
+      "userId": 1,
+      "userName": "Priyanka",
+      "password": "Priyanka@123",
+      "contact": "9765456777",
+      "role": 1,
+      "feedback": [],
+      "intern": [],
+      "project": []
+  },
+  {
+      "userId": 3,
+      "userName": "Harshini",
+      "password": "hashini@123",
+      "contact": "9888898898",
+      "role": 1,
+      "feedback": [],
+      "intern": [],
+      "project": []
+  },
+  {
+      "userId": 4,
+      "userName": "Kotesh",
+      "password": "kotesh@123",
+      "contact": "8767666888",
+      "role": 1,
+      "feedback": [],
+      "intern": [],
+      "project": []
+  }
+]
