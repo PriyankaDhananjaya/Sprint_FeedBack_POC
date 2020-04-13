@@ -15,6 +15,8 @@ export class LoginComponent {
   public checkUser : string;
   public user : string;
   public password:string;
+
+  public isValidUser : boolean;
   
   profileForm = this.fb.group({
     userName: [null, 
@@ -36,16 +38,26 @@ export class LoginComponent {
 
     console.log(this.profileForm.value);
     
-    //this.userList =  this._userDataService.getUser().subscribe(user => this.userList = user);
+  //   this._userDataService.getUser().subscribe(userData =>{ 
+  //     let data:string = userData.userName;
+  //     let dataPass: string = userData.password;
+  //     if( data === this.user && dataPass === this.password )
+  //     {
+  //       this.isValidUser = true;
+  //     }
+  //     else
+  //     {
+  //       this.isValidUser = false;
+  //     } 
+  // });
   
     //this.checkUser = this.userList.where({userName:user});
-     //console.log(this.userList[0]);
+     //console.log(this.isValidUser);
     
     //this.userList["userName"] === this.user && this.userList.passWord === this.password
-      
-      this.route.navigate(['/dashboard']);
+      //if (this.isValidUser) this.route.navigate(['/dashboard']);
     
-    //this.route.navigate(['/dashboard']);
+    this.route.navigate(['/dashboard']);
   }
 }
 

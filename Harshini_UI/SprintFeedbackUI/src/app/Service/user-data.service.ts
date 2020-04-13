@@ -3,7 +3,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Observable,throwError } from 'rxjs';
 import { project,intern,feedback,user } from '../Models/Data.model';
 import { catchError, filter } from 'rxjs/operators';
-
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class UserDataService {
 
   constructor(private http: HttpClient) { }
 
-  private _URL = "http://localhost:3000"
+  
 
   private handleError(errorResponse : HttpErrorResponse){
     if(errorResponse.error instanceof ErrorEvent){
@@ -25,19 +25,19 @@ export class UserDataService {
   }
 
   getUser(): Observable<user>{
-    return this.http.get<user>(this._URL + '/user').pipe(catchError(this.handleError));
+    return this.http.get<user>(environment.apiUrl+'/user').pipe(catchError(this.handleError));
   }
 
   getProjects() : Observable<project>{
-    return this.http.get<project>(this._URL + '/projects').pipe(catchError(this.handleError));
+    return this.http.get<project>(environment.apiUrl + '/projects').pipe(catchError(this.handleError));
   }
 
   getInterns() : Observable<intern>{
-    return this.http.get<intern>(this._URL + '/interns').pipe(catchError(this.handleError));
+    return this.http.get<intern>(environment.apiUrl + '/interns').pipe(catchError(this.handleError));
   }
 
   createNewProject(newProject:project) : Observable<project>{
-    return this.http.post<project>(this._URL + '/projects',newProject,{
+    return this.http.post<project>(environment.apiUrl + '/projects',newProject,{
       headers: new HttpHeaders({
         'Content-Type' : 'application/json' 
       })
@@ -46,7 +46,7 @@ export class UserDataService {
   }
 
   createNewIntern(newIntern:intern) : Observable<intern>{
-    return this.http.post<intern>(this._URL + '/interns',newIntern,{
+    return this.http.post<intern>(environment.apiUrl + '/interns',newIntern,{
       headers: new HttpHeaders({
         'Content-Type' : 'application/json' 
       })
@@ -55,7 +55,7 @@ export class UserDataService {
   }
 
   submitFeedback(newFeedback:feedback):Observable<feedback>{
-    return this.http.post<feedback>(this._URL + '/feedback',newFeedback,{
+    return this.http.post<feedback>(environment.apiUrl + '/feedback',newFeedback,{
       headers: new HttpHeaders({
         'Content-Type' : 'application/json' 
       })
@@ -64,6 +64,6 @@ export class UserDataService {
   }
 
   getFeedback():Observable<feedback[]>{
-    return this.http.get<feedback[]>(this._URL + '/feedback').pipe(catchError(this.handleError));
+    return this.http.get<feedback[]>(environment.apiUrl + '/feedback').pipe(catchError(this.handleError));
   }
 }
