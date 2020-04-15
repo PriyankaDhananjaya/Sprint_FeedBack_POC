@@ -12,7 +12,9 @@ import { project } from '../Models/Data.model';
 })
   
 export class AddProjectComponent implements OnInit {
+  
   @ViewChild(FormGroupDirective) Form;
+
   titleAlert: string = 'This field is required';
 
   constructor(private fb: FormBuilder, private _userDataService : UserDataService) { }

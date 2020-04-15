@@ -24,8 +24,8 @@ export class UserDataService {
     return throwError('There is a error with service');
   }
 
-  getUser(): Observable<user>{
-    return this.http.get<user>(environment.apiUrl+'/user').pipe(catchError(this.handleError));
+  getUser(): Observable<user[]>{
+    return this.http.get<user[]>(environment.apiUrl+'/user').pipe(catchError(this.handleError));
   }
 
   getProjects() : Observable<project>{

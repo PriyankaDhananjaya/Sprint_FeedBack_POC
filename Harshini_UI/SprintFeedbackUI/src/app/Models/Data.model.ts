@@ -5,6 +5,7 @@ export class user{
   password: string;
   role: string;
   contactNumber: number;
+  token?: string;
 }
 
 export class project {
