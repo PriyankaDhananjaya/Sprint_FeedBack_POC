@@ -23,7 +23,7 @@
       <button [disabled]="loginForm.pristine || loginForm.invalid" class="btn-sm btn-primary">
         Login
       </button>
-      <a routerLink="/register" class="btn btn-link">Sign Up</a>
+      <a routerLink="/register" class="btn btn-link" (click)="onRegister()">Sign Up</a>
     </div>
   </form>
 </div>

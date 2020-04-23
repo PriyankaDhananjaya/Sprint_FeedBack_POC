@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { FeedbackService } from '../services/feedback.service';
 import { Feedback } from '../models/feedback';
-import pdfMake from 'pdfmake/build/pdfmake';
-import pdfFonts from 'pdfmake/build/vfs_fonts';
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
+import { first } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import { Interns } from '../models/interns';
+import { User } from '../models/user';
 
 @Component({
   selector: 'app-feedback',
@@ -13,11 +14,14 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 })
 export class FeedbackComponent implements OnInit {
 
+  // @ViewChild('closebutton') closebutton;
   feedbackForm: FormGroup;
-  interns:any[];
-  managers: any[];
+  interns:Interns[];
+  managers: User[];
   feedbacks: Array<Feedback>;
+  ratings = ['Weak', 'Average','Good','Excellent']
   constructor(private formBuilder: FormBuilder,
+              private router: Router,
               private feedbackService: FeedbackService) { 
                 this.feedbacks =[];
                 this.interns = [];
@@ -25,33 +29,63 @@ export class FeedbackComponent implements OnInit {
               }
 
   ngOnInit() {
+    this.feedbackService.getInterns().subscribe(interns => {
+      this.interns = interns;
+      console.log(this.interns)
+    });
+    this.feedbackService.getUsers().subscribe(users => {
+      this.managers = users;
+      console.log(this.managers)
+    });
     this.feedbackForm = this.formBuilder.group({
-      InternName: ['', [Validators.required, Validators.pattern("^[a-z0-9_-]{6,15}$")]],
+      InternId: [0, [Validators.required]],
       ProblemSolvingAnalyzingSkill: ['', Validators.required],
       ProjectProcessCompliance: ['', Validators.required],
       TechnicalExcellence: ['', Validators.required],
       OverallTechnicalCompitency:['', Validators.required],
-      Manager: ['', [Validators.required, Validators.pattern("^[a-z0-9_-]{6,15}$")]],
+      UserId: [0, Validators.required],
       ProjectDelivery: ['', Validators.required],
       Teaming: ['', Validators.required],
       Communication: ['', Validators.required],
       Discipline: ['', Validators.required]
     });
    this.feedbackService.getFeedbacks().subscribe(feedback => {
+     console.log(feedback)
       this.feedbacks= feedback;
-      feedback.forEach(x=> this.interns.push(x.internId));
-      feedback.forEach(x=> this.managers.push(x.userId));
-      this.managers = Array.from(new Set(this.managers));
+
+      // feedback.forEach(x=> { if((this.interns.includes(x))) { this.interns.push(x.internId)}});
+      // feedback.forEach(x=> this.managers.push(x.userId));
+      // this.managers = Array.from(new Set(this.managers));
     });
+
   }
 
   submitFeedback() {
-    console.log("im inside submit feedback")
+    console.log("im inside submit feedback", this.feedbackForm.value)
+    // stop here if form is invalid
+    if (this.feedbackForm.invalid) {
+      return "invalid form.";
+  }
+  this.feedbackForm.patchValue({
+    InternId: 5,
+    UserId: 3
+  });
+
+  console.log(JSON.stringify(this.feedbackForm.value))
+  this.feedbackService.postFeedback(this.feedbackForm.value)
+      .pipe(first())
+      .subscribe(
+          data => {
+              console.log(data);
+              this.router.navigate(['/dashboard']);
+              window.alert("Feedback submitted successfully.")
+              this.ngOnInit();    
+              // this.closebutton.nativeElement.click();
+          },
+          error => {
+            window.alert("feedback failed to respond.")
+          });
   }
 
-  generatePdf(){
-    const documentDefinition = { content: 'This is an sample PDF printed with pdfMake' };
-    pdfMake.createPdf(documentDefinition).open();
-   }
-
+  get f() { return this.feedbackForm.controls; }
 }

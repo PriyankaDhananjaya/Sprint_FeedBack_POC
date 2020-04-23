@@ -1,5 +1,5 @@
 export interface Feedback {
-    feedbackId: number;
+    feedbackId?: number;
     problemSolvingAnalyzingSkill: String;
     technicalExcellence: string;
     projectDelivery: string;
@@ -10,6 +10,4 @@ export interface Feedback {
     overallTechnicalCompitency: string;
     internId: number;
     userId: number;
-    intern: number;
-    user: number
 }

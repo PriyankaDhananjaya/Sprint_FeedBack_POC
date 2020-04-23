@@ -31,22 +31,25 @@ export class RegisterComponent implements OnInit {
       private alertService: AlertService
   ) { 
       // redirect to home if already logged in
-      if (this.authenticationService.currentUserValue) { 
-          this.router.navigate(['/']);
-      }
+    //   if (this.authenticationService.currentUserValue) { 
+    //       this.router.navigate(['/']);
+    //   }
   }
 
   ngOnInit() {
       this.registerForm = this.formBuilder.group({
-          Role: ['', Validators.required],
+        //   Role: ['', Validators.required],
           ContactNumber: ['', Validators.required],
           username: ['', [Validators.required, Validators.pattern("^[a-z0-9_-]{6,15}$")]],
           password: ['', [Validators.required, Validators.minLength(6)]],
-          confirmPassword: ['', Validators.required]
+        //   confirmPassword: ['', Validators.required],
+          firstName: ['', Validators.required],
+          lastName: ['', Validators.required]
       },
-      {
-        validator: MustMatch('password', 'confirmPassword')
-    });
+    //   {
+        // validator: MustMatch('password', 'confirmPassword')
+    // }
+    );
   }
 
   // convenience getter for easy access to form fields
@@ -57,15 +60,16 @@ export class RegisterComponent implements OnInit {
 
       // stop here if form is invalid
       if (this.registerForm.invalid) {
-          return;
+          return "invalid form.";
       }
-
+      console.log(JSON.stringify(this.registerForm.value))
       this.loading = true;
       this.userService.register(this.registerForm.value)
           .pipe(first())
           .subscribe(
               data => {
-                  this.alertService.success('Registration successful', true);
+                  console.log(data);
+                  window.alert(data.message);
                   this.router.navigate(['/login']);
               },
               error => {

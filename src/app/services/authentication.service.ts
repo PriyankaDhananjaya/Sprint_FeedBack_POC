@@ -9,22 +9,7 @@ import { User } from '../models/user';
 export class AuthenticationService {
     private currentUserSubject: BehaviorSubject<User>;
     public currentUser: Observable<User>;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
-
     constructor(private http: HttpClient) {
         this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
         this.currentUser = this.currentUserSubject.asObservable();
@@ -35,20 +20,20 @@ export class AuthenticationService {
     }
 
     login(username: string, password: string) {
-        // return this.http.post<any>(`/users/authenticate`, { username, password })
-        //     .pipe(map(user => {
-        //         // login successful if there's a jwt token in the response
-        //         if (user && user.token) {
-        //             // store user details and jwt token in local storage to keep user logged in between page refreshes
-        //             localStorage.setItem('currentUser', JSON.stringify(user));
-        //             this.currentUserSubject.next(user);
-        //         }
+        return this.http.post<any>(`https://localhost:44390/api/users/authenticate`, { username, password })
+            .pipe(map(user => {
+                // login successful if there's a jwt token in the response
+                if (user && user.token) {
+                    // store user details and jwt token in local storage to keep user logged in between page refreshes
+                    localStorage.setItem('currentUser', JSON.stringify(user));
+                    this.currentUserSubject.next(user);
+                }
 
-        //         return user;
-        //     }));
-        var user = this.http.get<any>('assets/user.json');
-        this.currentUser = user;
-        return user;
+                return user;
+            }));
+        // var user = this.http.get<any>('assets/user.json');
+        // this.currentUser = user;
+        // return user;
     }
 
     logout() {

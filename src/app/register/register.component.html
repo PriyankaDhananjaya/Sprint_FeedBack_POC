@@ -18,20 +18,18 @@
         </div>
     </div>
     <div class="form-group">
-        <label class="white" for="password">Confirm Password</label>
-        <input type="password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
-        <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
-            <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
-            <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+        <label class="white" for="password">FirstName</label>
+        <input type="firstName" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+            <div *ngIf="f.firstName.errors.required">FirstName is required</div>
+            <!-- <div *ngIf="f.firstName.errors.mustMatch">Passwords must match</div> -->
         </div>
     </div>
     <div class="form-group">
-        <label class="white" for="Role">Role</label>
-        <select style="width: 13rem;" formControlName="Role" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Role.errors }">
-            <option *ngFor="let opt of options" [value]="opt.id">{{opt.label}}</option>
-        </select>
-        <div *ngIf="submitted && f.Role.errors" class="invalid-feedback">
-            <div *ngIf="f.Role.errors.required"> Role is required</div>
+        <label class="white" for="lastName">Lastname</label>
+        <input type="lastName" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+            <div *ngIf="f.lastName.errors.required"> lastName is required</div>
         </div>
     </div>
     <div class="form-group">

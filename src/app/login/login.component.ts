@@ -52,18 +52,23 @@ export class LoginComponent implements OnInit {
       if (this.loginForm.invalid) {
           return;
       }
-
       this.loading = true;
-      this.authenticationService.login(this.f.username.value, this.f.password.value)
-          .pipe(first())
-          .subscribe(
+      this.authenticationService.login(this.f.username.value, this.f.password.value).subscribe(
               data => {
-                console.log(1234);
+                  console.log(data)
+                  window.alert(data.message);
                   this.router.navigate(['./dashboard']);
               },
               error => {
+                window.alert("user login failed.")
                   this.alertService.error(error);
                   this.loading = false;
               });
+  }
+
+  onRegister() {
+   
+    this.router.navigate(['/register']);
+    console.log("hiu",this.router.url);
   }
 }

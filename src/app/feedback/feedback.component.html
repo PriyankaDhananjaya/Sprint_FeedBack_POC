@@ -30,7 +30,6 @@
   <div class="form-group ml-1">
     <button class="btn-sm btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Give Feedback</button>
   </div>
-  <button (click)="generatePdf()">Open PDF</button>
 </div>
 
 <!-- Modal -->
@@ -50,43 +49,60 @@
           <div class=" row ">
             <div class="col-6">
               <div class="form-group col-10">
-                <label class="white" for="InternName">Intern Name</label>
-                <select formControlName="InternName" class="form-control"
-                  [ngClass]="{ 'is-invalid': submitted && f.InternName.errors }">
-                  <option *ngFor="let intern of interns" [value]="opt">{{intern}}</option>
+                <label class="white" for="InternId">Intern Name</label>
+                <select formControlName="InternId" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.InternId.errors }">
+                  <option *ngFor="let intern of interns" [ngValue]="intern">{{intern.internName}}</option>
                 </select>
-                <div *ngIf="submitted && f.InternName.errors" class="invalid-feedback">
-                  <div *ngIf="f.InternName.errors.required"> InternName is required</div>
+                <div *ngIf="submitted && f.InternId.errors" class="invalid-feedback">
+                  <div *ngIf="f.InternId.errors.required"> InternId is required</div>
                 </div>
               </div>
               <div class="form-group col-10">
                 <label class="white" for="ProblemSolvingAnalyzingSkill">Problem Solving & Analyzing Skill</label>
-                <input type="text" formControlName="ProblemSolvingAnalyzingSkill" class="form-control"
-                  [ngClass]="{ 'is-invalid': submitted && f.ProblemSolvingAnalyzingSkill.errors }" />
+                <!-- <input type="text" formControlName="ProblemSolvingAnalyzingSkill" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.ProblemSolvingAnalyzingSkill.errors }" /> -->
+                  <select formControlName="ProblemSolvingAnalyzingSkill" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.ProblemSolvingAnalyzingSkill.errors }">
+                  <option *ngFor="let rate of ratings" [ngValue]="rate">{{rate}}</option>
+                </select>
                 <div *ngIf="submitted && f.ProblemSolvingAnalyzingSkill.errors" class="invalid-feedback">
                   <div *ngIf="f.ProblemSolvingAnalyzingSkill.errors.required">ProblemSolvingAnalyzingSkill is required</div>
                 </div>
               </div>
               <div class="form-group col-10">
                 <label class="white" for="ProjectProcessCompliance">Project Process Compliance</label>
-                <input type="text" formControlName="ProjectProcessCompliance" class="form-control"
-                  [ngClass]="{ 'is-invalid': submitted && f.ProjectProcessCompliance.errors }" />
+                <!-- <input type="text" formControlName="ProjectProcessCompliance" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.ProjectProcessCompliance.errors }" /> -->
+                  <select formControlName="ProjectProcessCompliance" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.ProjectProcessCompliance.errors }">
+                  <!-- <option [ngValue]="null" disabled>Choose your rating</option> -->
+                  <option *ngFor="let rate of ratings" [ngValue]="rate">{{rate}}</option>
+                </select>
                 <div *ngIf="submitted && f.ProjectProcessCompliance.errors" class="invalid-feedback">
                   <div *ngIf="f.ProjectProcessCompliance.errors.required">Project Process Compliance is required</div>
                 </div>
               </div>
               <div class="form-group col-10">
                 <label class="white" for="TechnicalExcellence">Technical Excellence</label>
-                <input type="text" formControlName="TechnicalExcellence" class="form-control"
-                  [ngClass]="{ 'is-invalid': submitted && f.TechnicalExcellence.errors }" />
+                <!-- <input type="text" formControlName="TechnicalExcellence" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.TechnicalExcellence.errors }" /> -->
+                  <select formControlName="TechnicalExcellence" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.TechnicalExcellence.errors }">
+                  <option *ngFor="let rate of ratings" [ngValue]="rate">{{rate}}</option>
+                </select>
                 <div *ngIf="submitted && f.TechnicalExcellence.errors" class="invalid-feedback">
                   <div *ngIf="f.TechnicalExcellence.errors.required">TechnicalExcellence is required</div>
                 </div>
               </div>
               <div class="form-group col-10">
                 <label class="white" for="OverallTechnicalCompitency">Overall technical compitency</label>
-                <input type="text" formControlName="OverallTechnicalCompitency" class="form-control"
-                  [ngClass]="{ 'is-invalid': submitted && f.OverallTechnicalCompitency.errors }" />
+                <!-- <input type="text" formControlName="OverallTechnicalCompitency" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.OverallTechnicalCompitency.errors }" /> -->
+                  <select formControlName="OverallTechnicalCompitency" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.OverallTechnicalCompitency.errors }">
+                  <option *ngFor="let rate of ratings" [ngValue]="rate">{{rate}}</option>
+                </select>
                 <div *ngIf="submitted && f.OverallTechnicalCompitency.errors" class="invalid-feedback">
                   <div *ngIf="f.OverallTechnicalCompitency.errors.required">Overall Technical Compitency is required</div>
                 </div>
@@ -94,43 +110,59 @@
             </div>
             <div class="col-6">
               <div class="form-group col-8">
-                <label class="white" for="Manager">Manager</label>
-                <select formControlName="Manager" class="form-control"
-                  [ngClass]="{ 'is-invalid': submitted && f.Manager.errors }">
-                  <option *ngFor="let manager of managers" [value]="opt">{{manager}}</option>
+                <label class="white" for="UserId">Manager</label>
+                <select formControlName="UserId" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.UserId.errors }">
+                  <option *ngFor="let manager of managers" [ngValue]="manager">{{manager.username}}</option>
                 </select>
-                <div *ngIf="submitted && f.Manager.errors" class="invalid-feedback">
-                  <div *ngIf="f.Manager.errors.required"> Manager is required</div>
+                <div *ngIf="submitted && f.UserId.errors" class="invalid-feedback">
+                  <div *ngIf="f.UserId.errors.required"> Manager is required</div>
                 </div>
               </div>
               <div class="form-group col-8">
                 <label class="white" for="ProjectDelivery">Project Delivery</label>
-                <input type="text" formControlName="ProjectDelivery" class="form-control"
-                  [ngClass]="{ 'is-invalid': submitted && f.ProjectDelivery.errors }" />
+                <!-- <input type="text" formControlName="ProjectDelivery" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.ProjectDelivery.errors }" /> -->
+                  <select formControlName="ProjectDelivery" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.ProjectDelivery.errors }">
+                  <option *ngFor="let rate of ratings" [ngValue]="rate">{{rate}}</option>
+                </select>
                 <div *ngIf="submitted && f.ProjectDelivery.errors" class="invalid-feedback">
                   <div *ngIf="f.ProjectDelivery.errors.required">Project Delivery is required</div>
                 </div>
               </div>
               <div class="form-group col-8">
                 <label class="white" for="Teaming">Teaming</label>
-                <input type="text" formControlName="Teaming" class="form-control"
-                  [ngClass]="{ 'is-invalid': submitted && f.Teaming.errors }" />
+                <!-- <input type="text" formControlName="Teaming" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.Teaming.errors }" /> -->
+                  <select formControlName="Teaming" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.Teaming.errors }">
+                  <option *ngFor="let rate of ratings" [ngValue]="rate">{{rate}}</option>
+                </select>
                 <div *ngIf="submitted && f.Teaming.errors" class="invalid-feedback">
                   <div *ngIf="f.Teaming.errors.required">Teaming is required</div>
                 </div>
               </div>
               <div class="form-group col-8">
                 <label class="white" for="Communication">Communication</label>
-                <input type="text" formControlName="Communication" class="form-control"
-                  [ngClass]="{ 'is-invalid': submitted && f.Communication.errors }" />
+                <!-- <input type="text" formControlName="Communication" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.Communication.errors }" /> -->
+                  <select formControlName="Communication" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.Communication.errors }">
+                  <option *ngFor="let rate of ratings" [ngValue]="rate">{{rate}}</option>
+                </select>
                 <div *ngIf="submitted && f.Communication.errors" class="invalid-feedback">
                   <div *ngIf="f.Communication.errors.required">Communication is required</div>
                 </div>
               </div>
               <div class="form-group col-8">
                 <label class="white" for="Discipline">Discipline</label>
-                <input type="text" formControlName="Discipline" class="form-control"
-                  [ngClass]="{ 'is-invalid': submitted && f.Discipline.errors }" />
+                <!-- <input type="text" formControlName="Discipline" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.Discipline.errors }" /> -->
+                  <select formControlName="Discipline" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.Discipline.errors }">
+                  <option *ngFor="let rate of ratings" [ngValue]="rate">{{rate}}</option>
+                </select>
                 <div *ngIf="submitted && f.Discipline.errors" class="invalid-feedback">
                   <div *ngIf="f.Discipline.errors.required">Discipline is required</div>
                 </div>
@@ -161,7 +193,7 @@
       <div class="row mb-3">
         <div class="col-6">
           <div class="col-8">InternId:</div>
-          <div class="col-8">InternName:</div>
+          <div class="col-8">InternId:</div>
           <div class="col-8">Manager:</div>
           <div class="col-8">Resume:</div>
         </div>
